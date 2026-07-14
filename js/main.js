@@ -112,58 +112,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-<<<<<<< HEAD
-
-/* ==========================================================
-   MENU ATIVO CONFORME A SEÇÃO
-========================================================== */
-
-const sections = document.querySelectorAll("section[id]");
-
-function setActiveLink() {
-
-    const scrollPosition = window.scrollY + header.offsetHeight + 120;
-
-    sections.forEach(section => {
-
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-        const id = section.getAttribute("id");
-
-        if (scrollPosition >= top && scrollPosition < bottom) {
-
-            desktopLinks.forEach(link => {
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === `#${id}`) {
-                    link.classList.add("active");
-                }
-            });
-
-            mobileLinks.forEach(link => {
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === `#${id}`) {
-                    link.classList.add("active");
-                }
-            });
-
-        }
-
-    });
-
-}
-
-setActiveLink();
-
-window.addEventListener("scroll", setActiveLink);
-
-
-
-
-
-=======
->>>>>>> 63d4e4d (inicio limpo)
 /* ==========================================================
    FECHAR MENU AO REDIMENSIONAR
 ========================================================== */
@@ -313,72 +261,6 @@ function initScrollIndicator(){
 
 }
 
-<<<<<<< HEAD
-/* ==========================================================
-   ESTATÍSTICAS
-========================================================== */
-
-const statsSection = document.querySelector(".stats");
-const statNumbers = document.querySelectorAll(".stat-number");
-
-let statsAnimated = false;
-
-/* ==========================================================
-   ANIMAR CONTADORES
-========================================================== */
-
-function animateStats() {
-
-    if (statsAnimated) return;
-
-    const trigger =
-        statsSection.getBoundingClientRect().top <
-        window.innerHeight * 0.8;
-
-    if (!trigger) return;
-
-    statsAnimated = true;
-
-    statNumbers.forEach((number) => {
-
-        const target = Number(number.dataset.target);
-
-        let current = 0;
-
-        const duration = 1800;
-
-        const increment = target / (duration / 16);
-
-        function updateCounter() {
-
-            current += increment;
-
-            if (current < target) {
-
-                number.textContent = Math.floor(current);
-
-                requestAnimationFrame(updateCounter);
-
-            } else {
-
-                number.textContent = target;
-
-            }
-
-        }
-
-        updateCounter();
-
-    });
-
-}
-
-window.addEventListener("scroll", animateStats);
-
-window.addEventListener("load", animateStats);
-
-=======
->>>>>>> 63d4e4d (inicio limpo)
 
 /* ==========================================================
    REPORTAGEM EM DESTAQUE
@@ -483,8 +365,6 @@ document.addEventListener("keydown", (event) => {
 
 });
 
-<<<<<<< HEAD
-=======
 
 /* ==========================================================
    ESTATÍSTICAS
@@ -550,7 +430,6 @@ window.addEventListener("scroll", animateStats);
 window.addEventListener("load", animateStats);
 
 
->>>>>>> 63d4e4d (inicio limpo)
 /* ==========================================================
    TRABALHOS
 ========================================================== */
@@ -673,102 +552,6 @@ workCards.forEach((card) => {
 
 });
 
-<<<<<<< HEAD
-/* ==========================================================
-   RÁDIO
-========================================================== */
-
-const audioButtons = document.querySelectorAll(".audio-play");
-
-let currentAudio = null;
-let currentButton = null;
-let currentProgress = null;
-
-/* ==========================================================
-   PLAYER
-========================================================== */
-
-audioButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-        const audioSrc = button.dataset.audio;
-
-        /* Se clicou no mesmo áudio */
-
-        if (
-            currentAudio &&
-            currentAudio.src.includes(audioSrc)
-        ) {
-
-            if (currentAudio.paused) {
-
-                currentAudio.play();
-                button.textContent = "❚❚";
-
-            } else {
-
-                currentAudio.pause();
-                button.textContent = "▶";
-
-            }
-
-            return;
-
-        }
-
-        /* Fecha áudio anterior */
-
-        if (currentAudio) {
-
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-
-            if (currentButton) {
-                currentButton.textContent = "▶";
-            }
-
-            if (currentProgress) {
-                currentProgress.style.width = "0%";
-            }
-
-        }
-
-        /* Novo áudio */
-
-        currentAudio = new Audio(audioSrc);
-
-        currentButton = button;
-
-        currentProgress = button
-            .closest(".audio-player")
-            .querySelector(".audio-progress-fill");
-
-        currentAudio.play();
-
-        button.textContent = "❚❚";
-
-        /* Barra */
-
-        currentAudio.addEventListener("timeupdate", () => {
-
-            const percent =
-                (currentAudio.currentTime / currentAudio.duration) * 100;
-
-            currentProgress.style.width = `${percent}%`;
-
-        });
-
-        /* Terminou */
-
-        currentAudio.addEventListener("ended", () => {
-
-            button.textContent = "▶";
-
-            currentProgress.style.width = "0%";
-
-        });
-=======
 
 // ==========================================
 // COMPETÊNCIAS
@@ -830,61 +613,11 @@ skillCards.forEach(card => {
 
         card.style.transform =
             "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
->>>>>>> 63d4e4d (inicio limpo)
 
     });
 
 });
 
-<<<<<<< HEAD
-/* ==========================================================
-   VTS E AUDIOVISUAL
-========================================================== */
-
-
-/* ==========================================================
-   FILTROS
-========================================================== */
-
-const vtFilters = document.querySelectorAll(".vt-filter");
-const vtCards = document.querySelectorAll(".vt-card");
-
-
-vtFilters.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-
-        // Remove ativo
-
-        vtFilters.forEach((btn) => {
-            btn.classList.remove("active");
-        });
-
-
-        button.classList.add("active");
-
-
-        const filter = button.dataset.filter;
-
-
-
-        vtCards.forEach((card) => {
-
-            const category = card.dataset.category;
-
-
-            if (
-                filter === "all" ||
-                category === filter
-            ) {
-
-                card.classList.remove("hide");
-
-            } else {
-
-                card.classList.add("hide");
-=======
 // ==========================================
 // BASTIDORES
 // ==========================================
@@ -912,54 +645,11 @@ if (backstageCards.length) {
                 }, index * 80);
 
                 backstageObserver.unobserve(entry.target);
->>>>>>> 63d4e4d (inicio limpo)
 
             }
 
         });
 
-<<<<<<< HEAD
-
-    });
-
-});
-
-
-
-
-
-/* ==========================================================
-   ABRIR VÍDEOS
-========================================================== */
-
-const vtPlayButtons = document.querySelectorAll(".vt-play");
-
-
-vtPlayButtons.forEach((button) => {
-
-
-    button.addEventListener("click", () => {
-
-
-        const videoId = button.dataset.video;
-
-
-        if (!videoModal || !videoFrame) return;
-
-
-        videoFrame.src =
-            `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-
-
-        videoModal.classList.add("active");
-
-
-        document.body.style.overflow = "hidden";
-
-
-    });
-
-=======
     }, {
         threshold: 0.15
     });
@@ -1181,6 +871,5 @@ document.querySelectorAll(".footer-social a").forEach(link => {
         link.style.transform = "";
 
     });
->>>>>>> 63d4e4d (inicio limpo)
 
 });

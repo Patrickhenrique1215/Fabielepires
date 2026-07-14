@@ -103,11 +103,7 @@
 .nav-link {
     position: relative;
     text-decoration: none;
-<<<<<<< HEAD
-    color: rgba(255,255,255,.82);
-=======
     color: var(--color-secondary);
->>>>>>> 63d4e4d (inicio limpo)
     font-size: .95rem;
     font-weight: 500;
     transition: .3s;
@@ -118,11 +114,7 @@
 }
 
 .nav-link:hover {
-<<<<<<< HEAD
-    color: #fff;
-=======
     transform: scale(1.07);
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 .header.scrolled .nav-link:hover {
@@ -147,13 +139,6 @@
     width: 100%;
 }
 
-<<<<<<< HEAD
-.nav-link.active {
-    color: #fff;
-}
-
-=======
->>>>>>> 63d4e4d (inicio limpo)
 .header.scrolled .nav-link.active {
     color: var(--primary);
 }
@@ -167,23 +152,15 @@
     align-items: center;
     gap: 18px;
     flex-shrink: 0;
-<<<<<<< HEAD
-=======
     
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 .header-btn {
     text-decoration: none;
     padding: 12px 22px;
     border-radius: 999px;
-<<<<<<< HEAD
-    border: 1px solid rgba(255,255,255,.2);
-    color: #fff;
-=======
     border: 1px solid rgba(142, 141, 150, 0.4);
     color: var(--color-text);
->>>>>>> 63d4e4d (inicio limpo)
     font-weight: 600;
     font-size: .9rem;
     transition: .3s;
@@ -192,33 +169,21 @@
 
 .header-btn:hover {
     transform: translateY(-2px);
-<<<<<<< HEAD
-    background: rgba(255,255,255,.08);
-=======
     background: rgba(255,255,255,.1);
     
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 .header.scrolled .header-btn {
     color: var(--primary);
-<<<<<<< HEAD
-    border-color: rgba(59,130,246,.18);
-    background: rgba(59,130,246,.06);
-=======
     border-color: rgba(59,130,246,.3);
     background: rgba(59,130,246,.06);
     
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 .header.scrolled .header-btn:hover {
     background: var(--primary);
     color: #fff;
-<<<<<<< HEAD
-=======
     
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 /* =======================================================
@@ -741,26 +706,14 @@
     border-right:2px solid rgba(255,255,255,.8);
 
 }
-<<<<<<< HEAD
-/* ==========================================================
-=======
 
 
 /* ======================================================
->>>>>>> 63d4e4d (inicio limpo)
    SCROLL INDICATOR
 ========================================================== */
 
 .scroll-indicator{
 
-<<<<<<< HEAD
-    position:absolute;
-
-    left:50%;
-
-    bottom:40px;
-
-=======
     width: fit-content;
 
     position:absolute;
@@ -773,7 +726,6 @@
 
     margin: 0 auto;
 
->>>>>>> 63d4e4d (inicio limpo)
     transform:translateX(-50%);
 
     display:flex;
@@ -788,10 +740,6 @@
 
     animation:fadeUp 1.5s ease forwards;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 63d4e4d (inicio limpo)
 }
 
 .scroll-indicator span{
@@ -1081,168 +1029,6 @@
 
 }
 
-<<<<<<< HEAD
-/* ==========================================================
-   KEYFRAMES
-========================================================== */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes fadeLeft{
-
-    from{
-
-        opacity:0;
-
-        transform:translateX(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0);
-
-    }
-
-}
-
-@keyframes floatImage{
-
-    0%{
-
-        transform:translateY(0px);
-
-    }
-
-    50%{
-
-        transform:translateY(-10px);
-
-    }
-
-    100%{
-
-        transform:translateY(0px);
-
-    }
-
-}
-
-@keyframes scrollWheel{
-
-    0%{
-
-        transform:translateY(0);
-
-        opacity:1;
-
-    }
-
-    70%{
-
-        transform:translateY(14px);
-
-        opacity:0;
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-        opacity:0;
-
-    }
-
-}
-
-@keyframes blobOne{
-
-    0%{
-
-        transform:translate(0,0) scale(1);
-
-    }
-
-    50%{
-
-        transform:translate(50px,30px) scale(1.15);
-
-    }
-
-    100%{
-
-        transform:translate(0,0) scale(1);
-
-    }
-
-}
-
-@keyframes blobTwo{
-
-    0%{
-
-        transform:translate(0,0) scale(1);
-
-    }
-
-    50%{
-
-        transform:translate(-40px,-20px) scale(.9);
-
-    }
-
-    100%{
-
-        transform:translate(0,0) scale(1);
-
-    }
-
-}
-
-/* ==========================================================
-   LARGE DESKTOP
-========================================================== */
-
-@media (min-width:1600px){
-
-    .hero-container{
-
-        gap:120px;
-
-    }
-
-    .image-frame{
-
-        width:520px;
-
-        height:670px;
-
-    }
-
-}
-=======
->>>>>>> 63d4e4d (inicio limpo)
 
 /* ==========================================================
    ACCESSIBILITY
@@ -1277,11 +1063,7 @@
 
 .stats {
     position: relative;
-<<<<<<< HEAD
-    padding: 120px 0;
-=======
     padding: 70px 0;
->>>>>>> 63d4e4d (inicio limpo)
     background: linear-gradient(
         180deg,
         #ffffff 0%,
@@ -1522,11 +1304,7 @@
 
 .featured-report {
     position: relative;
-<<<<<<< HEAD
-    padding: 120px 0;
-=======
     padding: 70px 0;
->>>>>>> 63d4e4d (inicio limpo)
     background: #fff;
     overflow: hidden;
 }
@@ -1887,11 +1665,7 @@
 
 .works {
     position: relative;
-<<<<<<< HEAD
-    padding: 120px 0;
-=======
     padding: 70px 0;
->>>>>>> 63d4e4d (inicio limpo)
     background: linear-gradient(
         180deg,
         #f8fafc 0%,
@@ -2163,76 +1937,6 @@
     display: none;
 }
 
-<<<<<<< HEAD
-/* =======================================================
-   RÁDIO
-======================================================= */
-
-.radio {
-    position: relative;
-    padding: 120px 0;
-    background: #ffffff;
-    overflow: hidden;
-}
-
-.radio::before {
-    content: "";
-    position: absolute;
-    right: -180px;
-    top: -180px;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: radial-gradient(
-        rgba(59,130,246,.08),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-.radio::after {
-    content: "";
-    position: absolute;
-    left: -180px;
-    bottom: -180px;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: radial-gradient(
-        rgba(99,102,241,.06),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-/* =======================================================
-   GRID
-======================================================= */
-
-.radio-grid {
-    display: grid;
-    gap: 32px;
-}
-
-/* =======================================================
-   CARD
-======================================================= */
-
-.radio-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
-
-    padding: 34px;
-
-    background: #fff;
-
-    border: 1px solid rgba(15,23,42,.06);
-
-    border-radius: 28px;
-
-    box-shadow: 0 18px 40px rgba(15,23,42,.05);
-=======
 
 
 
@@ -2271,35 +1975,11 @@
 
     box-shadow:
         0 18px 40px rgba(0,0,0,.08);
->>>>>>> 63d4e4d (inicio limpo)
 
     transition:
         transform .35s ease,
         box-shadow .35s ease,
         border-color .35s ease;
-<<<<<<< HEAD
-}
-
-.radio-card:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(59,130,246,.18);
-
-    box-shadow:
-        0 28px 60px rgba(15,23,42,.08),
-        0 10px 25px rgba(59,130,246,.08);
-}
-
-/* =======================================================
-   ÍCONE
-======================================================= */
-
-.radio-icon {
-    flex-shrink: 0;
-
-    width: 82px;
-    height: 82px;
-=======
 
     overflow: hidden;
 }
@@ -2758,7 +2438,6 @@
     height: 76px;
 
     margin: 0 auto 24px;
->>>>>>> 63d4e4d (inicio limpo)
 
     display: flex;
     align-items: center;
@@ -2770,716 +2449,6 @@
 
     background: linear-gradient(
         135deg,
-<<<<<<< HEAD
-        rgba(59,130,246,.12),
-        rgba(99,102,241,.08)
-    );
-}
-
-/* =======================================================
-   CONTEÚDO
-======================================================= */
-
-.radio-content {
-    flex: 1;
-}
-
-.radio-program {
-    display: inline-block;
-
-    margin-bottom: 14px;
-
-    color: var(--primary);
-
-    font-size: .82rem;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: .08em;
-}
-
-.radio-title {
-    font-family: var(--font-title);
-
-    font-size: 1.8rem;
-
-    color: var(--text);
-
-    margin-bottom: 18px;
-
-    line-height: 1.2;
-}
-
-.radio-description {
-    color: var(--text-light);
-
-    line-height: 1.9;
-
-    margin-bottom: 24px;
-}
-
-/* =======================================================
-   META
-======================================================= */
-
-.radio-meta {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-}
-
-.radio-meta span {
-    color: var(--text-light);
-    font-size: .9rem;
-}
-
-/* =======================================================
-   PLAYER
-======================================================= */
-
-.audio-player {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    padding: 20px 22px;
-
-    border-radius: 20px;
-
-    background: #f8fafc;
-
-    border: 1px solid rgba(15,23,42,.06);
-}
-
-/* =======================================================
-   PLAY
-======================================================= */
-
-.audio-play {
-    width: 58px;
-    height: 58px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: var(--primary);
-
-    color: #fff;
-
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    flex-shrink: 0;
-
-    transition: .3s;
-}
-
-.audio-play:hover {
-    transform: scale(1.08);
-    background: #2563eb;
-}
-
-/* =======================================================
-   INFO
-======================================================= */
-
-.audio-info {
-    flex: 1;
-}
-
-.audio-label {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: var(--text);
-
-    font-weight: 600;
-}
-
-/* =======================================================
-   PROGRESS
-======================================================= */
-
-.audio-progress {
-    position: relative;
-
-    width: 100%;
-    height: 8px;
-
-    border-radius: 999px;
-
-    overflow: hidden;
-
-    background: rgba(15,23,42,.08);
-}
-
-.audio-progress-fill {
-    width: 0%;
-    height: 100%;
-
-    border-radius: inherit;
-
-    background: linear-gradient(
-        90deg,
-        var(--primary),
-        #6366f1
-    );
-
-    transition: width .2s linear;
-}
-
-/* =======================================================
-   TEMPO
-======================================================= */
-
-.audio-time {
-    color: var(--text-light);
-
-    font-size: .85rem;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-}
-
-/* =======================================================
-   PRODUÇÕES JORNALÍSTICAS
-======================================================= */
-
-.productions {
-    position: relative;
-    padding: 120px 0;
-    background: linear-gradient(
-        180deg,
-        #f8fafc 0%,
-        #ffffff 100%
-    );
-    overflow: hidden;
-}
-
-.productions::before {
-    content: "";
-    position: absolute;
-    top: -220px;
-    right: -180px;
-    width: 480px;
-    height: 480px;
-    border-radius: 50%;
-    background: radial-gradient(
-        rgba(59, 130, 246, .08),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-.productions::after {
-    content: "";
-    position: absolute;
-    bottom: -220px;
-    left: -180px;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: radial-gradient(
-        rgba(99, 102, 241, .06),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-/* =======================================================
-   GRID
-======================================================= */
-
-.productions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
-
-/* =======================================================
-   CARD
-======================================================= */
-
-.production-card {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 34px;
-
-    background: rgba(255,255,255,.92);
-
-    border: 1px solid rgba(15,23,42,.06);
-
-    border-radius: 28px;
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow: 0 18px 40px rgba(15,23,42,.05);
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
-}
-
-.production-card:hover {
-    transform: translateY(-10px);
-
-    border-color: rgba(59,130,246,.18);
-
-    box-shadow:
-        0 28px 65px rgba(15,23,42,.08),
-        0 10px 24px rgba(59,130,246,.08);
-}
-
-/* Barra superior */
-
-.production-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 34px;
-
-    width: 70px;
-    height: 4px;
-
-    border-radius: 999px;
-
-    background: linear-gradient(
-        90deg,
-        var(--primary),
-        #6366f1
-    );
-}
-
-/* =======================================================
-   HEADER
-======================================================= */
-
-.production-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 24px;
-}
-
-.production-badge {
-    padding: 8px 16px;
-
-    border-radius: 999px;
-
-    background: rgba(59,130,246,.08);
-
-    color: var(--primary);
-
-    font-size: .78rem;
-    font-weight: 700;
-
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
-}
-
-.production-year {
-    color: var(--text-light);
-
-    font-size: .9rem;
-
-    font-weight: 600;
-}
-
-/* =======================================================
-   TÍTULO
-======================================================= */
-
-.production-title {
-    font-family: var(--font-title);
-
-    font-size: 1.6rem;
-
-    color: var(--text);
-
-    line-height: 1.3;
-
-    margin-bottom: 18px;
-}
-
-/* =======================================================
-   DESCRIÇÃO
-======================================================= */
-
-.production-description {
-    color: var(--text-light);
-
-    line-height: 1.9;
-
-    margin-bottom: 30px;
-}
-
-/* =======================================================
-   PARTICIPAÇÃO
-======================================================= */
-
-.production-role {
-    margin-top: auto;
-}
-
-.production-role h4 {
-    color: var(--text);
-
-    font-size: 1rem;
-
-    margin-bottom: 18px;
-}
-
-.production-role ul {
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 14px;
-}
-
-.production-role li {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    color: var(--text);
-
-    line-height: 1.6;
-}
-
-.production-role li::before {
-    content: "✓";
-
-    width: 24px;
-    height: 24px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(59,130,246,.10);
-
-    color: var(--primary);
-
-    font-size: .8rem;
-
-    font-weight: bold;
-}
-
-/* =======================================================
-   VTS E AUDIOVISUAL
-======================================================= */
-
-.vts {
-    position: relative;
-    padding: 120px 0;
-    background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #f8fafc 100%
-    );
-    overflow: hidden;
-}
-
-.vts::before {
-    content: "";
-    position: absolute;
-    top: -200px;
-    left: -150px;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: radial-gradient(
-        rgba(59,130,246,.08),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-/* =======================================================
-   FILTROS
-======================================================= */
-
-.vts-filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-
-    margin-bottom: 70px;
-}
-
-.vt-filter {
-    padding: 12px 24px;
-
-    border-radius: 999px;
-
-    border: 1px solid rgba(15,23,42,.08);
-
-    background: #fff;
-
-    color: var(--text);
-
-    font-size: .95rem;
-
-    font-weight: 500;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-.vt-filter:hover {
-    color: var(--primary);
-
-    border-color: rgba(59,130,246,.25);
-
-    transform: translateY(-3px);
-}
-
-.vt-filter.active {
-    background: var(--primary);
-
-    color: #fff;
-
-    border-color: var(--primary);
-}
-
-
-/* =======================================================
-   GRID
-======================================================= */
-
-.vts-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 32px;
-
-}
-
-
-/* =======================================================
-   CARD
-======================================================= */
-
-.vt-card {
-
-    background: #fff;
-
-    border-radius: 28px;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(15,23,42,.06);
-
-    box-shadow:
-        0 18px 40px rgba(15,23,42,.05);
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
-
-}
-
-.vt-card:hover {
-
-    transform: translateY(-10px);
-
-    border-color: rgba(59,130,246,.18);
-
-    box-shadow:
-        0 28px 65px rgba(15,23,42,.08),
-        0 10px 25px rgba(59,130,246,.08);
-
-}
-
-
-/* =======================================================
-   IMAGEM
-======================================================= */
-
-.vt-image {
-
-    position: relative;
-
-    aspect-ratio: 16 / 9;
-
-    overflow: hidden;
-
-    background: #0f172a;
-
-}
-
-
-.vt-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition:
-        transform .6s ease;
-
-}
-
-
-.vt-card:hover .vt-image img {
-
-    transform: scale(1.06);
-
-}
-
-
-/* =======================================================
-   PLAY BUTTON
-======================================================= */
-
-.vt-play {
-
-    position: absolute;
-
-    inset: 0;
-
-    margin: auto;
-
-    width: 72px;
-
-    height: 72px;
-
-
-    border: none;
-
-    border-radius: 50%;
-
-
-    background: rgba(255,255,255,.92);
-
-
-    color: var(--primary);
-
-
-    font-size: 1.4rem;
-
-
-    cursor: pointer;
-
-
-    z-index: 3;
-
-
-    transition: .35s;
-
-}
-
-
-.vt-play:hover {
-
-    transform: scale(1.12);
-
-    box-shadow:
-        0 15px 40px rgba(59,130,246,.35);
-
-}
-
-
-/* =======================================================
-   CATEGORIA
-======================================================= */
-
-.vt-category {
-
-    position: absolute;
-
-    top: 18px;
-
-    left: 18px;
-
-
-    padding: 8px 16px;
-
-
-    border-radius: 999px;
-
-
-    background: rgba(255,255,255,.92);
-
-
-    color: var(--primary);
-
-
-    font-size: .75rem;
-
-
-    font-weight: 700;
-
-
-    text-transform: uppercase;
-
-
-    letter-spacing: .08em;
-
-}
-
-
-
-/* =======================================================
-   CONTEÚDO
-======================================================= */
-
-.vt-content {
-
-    padding: 28px;
-
-}
-
-
-.vt-title {
-
-    font-family: var(--font-title);
-
-
-    font-size: 1.5rem;
-
-
-    line-height: 1.3;
-
-
-    color: var(--text);
-
-=======
         rgba(0,119,255,.10),
         rgba(0,119,255,.20)
     );
@@ -3512,112 +2481,21 @@
     font-weight: 700;
 
     color: var(--title-color);
->>>>>>> 63d4e4d (inicio limpo)
 
     margin-bottom: 16px;
 
 }
 
-<<<<<<< HEAD
-
-.vt-description {
-
-    color: var(--text-light);
-
-
-    line-height: 1.8;
-
-
-    margin-bottom: 22px;
-=======
 .tool-description {
 
     color: var(--text-color);
 
     font-size: .96rem;
     line-height: 1.75;
->>>>>>> 63d4e4d (inicio limpo)
 
 }
 
 
-<<<<<<< HEAD
-/* =======================================================
-   DETALHES
-======================================================= */
-
-.vt-details {
-
-    display: flex;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-
-    margin-bottom: 24px;
-
-}
-
-
-.vt-details span {
-
-    color: var(--text-light);
-
-
-    font-size: .9rem;
-
-}
-
-
-/* =======================================================
-   SKILLS
-======================================================= */
-
-.vt-skills {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-}
-
-
-.vt-skills span {
-
-    padding: 8px 14px;
-
-
-    border-radius: 999px;
-
-
-    background:
-        rgba(59,130,246,.08);
-
-
-    color: var(--primary);
-
-
-    font-size: .8rem;
-
-
-    font-weight: 600;
-
-}
-
-
-/* =======================================================
-   FILTRO JS
-======================================================= */
-
-.vt-card.hide {
-
-    display: none;
-
-}
-=======
 /* ===================================================== */
 /* FOOTER */
 /* ===================================================== */
@@ -3846,4 +2724,3 @@
         transform .8s ease;
 
 }
->>>>>>> 63d4e4d (inicio limpo)
