@@ -1,0 +1,1186 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+const header = document.getElementById("header");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+const desktopLinks = document.querySelectorAll(".nav-link");
+const mobileLinks = document.querySelectorAll(".mobile-link");
+
+
+
+/* ==========================================================
+   HEADER SCROLL
+========================================================== */
+
+function handleHeaderScroll() {
+    if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+}
+
+handleHeaderScroll();
+
+window.addEventListener("scroll", handleHeaderScroll);
+
+
+
+
+
+/* ==========================================================
+   MOBILE MENU
+========================================================== */
+
+if (menuToggle) {
+
+    menuToggle.addEventListener("click", () => {
+
+        menuToggle.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+
+        const expanded =
+            menuToggle.getAttribute("aria-expanded") === "true";
+
+        menuToggle.setAttribute("aria-expanded", !expanded);
+
+        document.body.classList.toggle("menu-open");
+
+    });
+
+}
+
+
+
+
+
+/* ==========================================================
+   FECHAR MENU AO CLICAR EM UM LINK
+========================================================== */
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        document.body.classList.remove("menu-open");
+
+    });
+
+});
+
+
+
+
+
+/* ==========================================================
+   SCROLL SUAVE
+========================================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        const headerHeight = header.offsetHeight;
+
+        const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+
+
+
+<<<<<<< HEAD
+
+/* ==========================================================
+   MENU ATIVO CONFORME A SEÇÃO
+========================================================== */
+
+const sections = document.querySelectorAll("section[id]");
+
+function setActiveLink() {
+
+    const scrollPosition = window.scrollY + header.offsetHeight + 120;
+
+    sections.forEach(section => {
+
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+
+            desktopLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === `#${id}`) {
+                    link.classList.add("active");
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === `#${id}`) {
+                    link.classList.add("active");
+                }
+            });
+
+        }
+
+    });
+
+}
+
+setActiveLink();
+
+window.addEventListener("scroll", setActiveLink);
+
+
+
+
+
+=======
+>>>>>>> 63d4e4d (inicio limpo)
+/* ==========================================================
+   FECHAR MENU AO REDIMENSIONAR
+========================================================== */
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 992) {
+
+        mobileMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        document.body.classList.remove("menu-open");
+
+    }
+
+});
+
+/* ==========================================================
+   HERO
+   Arquivo: js/main.js
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initHeroParallax();
+    initHeroTilt();
+    initScrollIndicator();
+
+});
+
+
+/* ==========================================================
+   PARALLAX
+========================================================== */
+
+function initHeroParallax(){
+
+    const hero = document.querySelector(".hero");
+
+    const blur1 = document.querySelector(".blur-1");
+    const blur2 = document.querySelector(".blur-2");
+    const grid = document.querySelector(".grid-overlay");
+
+    if(!hero) return;
+
+    window.addEventListener("scroll", () => {
+
+        const offset = window.scrollY;
+
+        blur1.style.transform =
+            `translateY(${offset * .12}px)`;
+
+        blur2.style.transform =
+            `translateY(${offset * -.10}px)`;
+
+        grid.style.transform =
+            `translateY(${offset * .05}px)`;
+
+    });
+
+}
+
+
+
+/* ==========================================================
+   HERO IMAGE TILT
+========================================================== */
+
+function initHeroTilt(){
+
+    const frame = document.querySelector(".image-frame");
+
+    if(!frame) return;
+
+    frame.addEventListener("mousemove", e=>{
+
+        const rect = frame.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        const rotateY =
+            ((x / rect.width) - .5) * 8;
+
+        const rotateX =
+            ((y / rect.height) - .5) * -8;
+
+        frame.style.transform =
+
+        `
+        perspective(1200px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-8px)
+        `;
+
+    });
+
+
+    frame.addEventListener("mouseleave", ()=>{
+
+        frame.style.transform =
+
+        `
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0px)
+        `;
+
+    });
+
+}
+
+
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+function initScrollIndicator(){
+
+    const indicator =
+        document.querySelector(".scroll-indicator");
+
+    if(!indicator) return;
+
+    window.addEventListener("scroll", ()=>{
+
+        if(window.scrollY > 120){
+
+            indicator.style.opacity = "0";
+            indicator.style.pointerEvents = "none";
+
+        }
+
+        else{
+
+            indicator.style.opacity = "1";
+            indicator.style.pointerEvents = "all";
+
+        }
+
+    });
+
+}
+
+<<<<<<< HEAD
+/* ==========================================================
+   ESTATÍSTICAS
+========================================================== */
+
+const statsSection = document.querySelector(".stats");
+const statNumbers = document.querySelectorAll(".stat-number");
+
+let statsAnimated = false;
+
+/* ==========================================================
+   ANIMAR CONTADORES
+========================================================== */
+
+function animateStats() {
+
+    if (statsAnimated) return;
+
+    const trigger =
+        statsSection.getBoundingClientRect().top <
+        window.innerHeight * 0.8;
+
+    if (!trigger) return;
+
+    statsAnimated = true;
+
+    statNumbers.forEach((number) => {
+
+        const target = Number(number.dataset.target);
+
+        let current = 0;
+
+        const duration = 1800;
+
+        const increment = target / (duration / 16);
+
+        function updateCounter() {
+
+            current += increment;
+
+            if (current < target) {
+
+                number.textContent = Math.floor(current);
+
+                requestAnimationFrame(updateCounter);
+
+            } else {
+
+                number.textContent = target;
+
+            }
+
+        }
+
+        updateCounter();
+
+    });
+
+}
+
+window.addEventListener("scroll", animateStats);
+
+window.addEventListener("load", animateStats);
+
+=======
+>>>>>>> 63d4e4d (inicio limpo)
+
+/* ==========================================================
+   REPORTAGEM EM DESTAQUE
+========================================================== */
+
+/*
+|--------------------------------------------------------------------------
+| IMPORTANTE
+|--------------------------------------------------------------------------
+|
+| Troque o ID abaixo pelo ID do seu vídeo no YouTube.
+|
+| Exemplo:
+| https://www.youtube.com/watch?v=AbCdEfGh123
+|
+| ID = AbCdEfGh123
+|
+*/
+
+const FEATURED_VIDEO_ID = "AbCdEfGh123";
+
+const videoModal = document.getElementById("videoModal");
+const videoFrame = document.getElementById("featuredVideoFrame");
+
+const openVideoButton = document.getElementById("openFeaturedVideo");
+const watchFeaturedButton = document.getElementById("watchFeaturedButton");
+
+const closeVideoButton = document.getElementById("closeVideoModal");
+const modalOverlay = document.querySelector(".video-modal-overlay");
+
+/* ==========================================================
+   ABRIR MODAL
+========================================================== */
+
+function openFeaturedVideo() {
+
+    videoFrame.src =
+        `https://www.youtube.com/embed/${FEATURED_VIDEO_ID}?autoplay=1&rel=0`;
+
+    videoModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+/* ==========================================================
+   FECHAR MODAL
+========================================================== */
+
+function closeFeaturedVideo() {
+
+    videoModal.classList.remove("active");
+
+    videoFrame.src = "";
+
+    document.body.style.overflow = "";
+
+}
+
+/* ==========================================================
+   EVENTOS
+========================================================== */
+
+if (openVideoButton) {
+
+    openVideoButton.addEventListener("click", openFeaturedVideo);
+
+}
+
+if (watchFeaturedButton) {
+
+    watchFeaturedButton.addEventListener("click", openFeaturedVideo);
+
+}
+
+if (closeVideoButton) {
+
+    closeVideoButton.addEventListener("click", closeFeaturedVideo);
+
+}
+
+if (modalOverlay) {
+
+    modalOverlay.addEventListener("click", closeFeaturedVideo);
+
+}
+
+/* ==========================================================
+   ESC
+========================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (
+        event.key === "Escape" &&
+        videoModal.classList.contains("active")
+    ) {
+
+        closeFeaturedVideo();
+
+    }
+
+});
+
+<<<<<<< HEAD
+=======
+
+/* ==========================================================
+   ESTATÍSTICAS
+========================================================== */
+
+const statsSection = document.querySelector(".stats");
+const statNumbers = document.querySelectorAll(".stat-number");
+
+let statsAnimated = false;
+
+/* ==========================================================
+   ANIMAR CONTADORES
+========================================================== */
+
+function animateStats() {
+
+    if (statsAnimated) return;
+
+    const trigger =
+        statsSection.getBoundingClientRect().top <
+        window.innerHeight * 0.8;
+
+    if (!trigger) return;
+
+    statsAnimated = true;
+
+    statNumbers.forEach((number) => {
+
+        const target = Number(number.dataset.target);
+
+        let current = 0;
+
+        const duration = 1800;
+
+        const increment = target / (duration / 16);
+
+        function updateCounter() {
+
+            current += increment;
+
+            if (current < target) {
+
+                number.textContent = Math.floor(current);
+
+                requestAnimationFrame(updateCounter);
+
+            } else {
+
+                number.textContent = target;
+
+            }
+
+        }
+
+        updateCounter();
+
+    });
+
+}
+
+window.addEventListener("scroll", animateStats);
+
+window.addEventListener("load", animateStats);
+
+
+>>>>>>> 63d4e4d (inicio limpo)
+/* ==========================================================
+   TRABALHOS
+========================================================== */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const workCards = document.querySelectorAll(".work-card");
+
+/* ==========================================================
+   FILTROS
+========================================================== */
+
+filterButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        /* Remove o ativo */
+
+        filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        workCards.forEach((card) => {
+
+            const category = card.dataset.category;
+
+            if (filter === "all" || filter === category) {
+
+                card.classList.remove("hide");
+
+            } else {
+
+                card.classList.add("hide");
+
+            }
+
+        });
+
+    });
+
+});
+
+/* ==========================================================
+   ABRIR VÍDEO
+========================================================== */
+
+const workVideoButtons = document.querySelectorAll(
+    ".work-button[data-video]"
+);
+
+workVideoButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const videoId = button.dataset.video;
+
+        videoFrame.src =
+            `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+        videoModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+/* ==========================================================
+   OUVIR ÁUDIO
+========================================================== */
+
+const workAudioButtons = document.querySelectorAll(
+    ".work-button[data-audio]"
+);
+
+workAudioButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const audio = button.dataset.audio;
+
+        window.open(audio, "_blank");
+
+    });
+
+});
+
+/* ==========================================================
+   CARD HOVER (EFEITO 3D LEVE)
+========================================================== */
+
+workCards.forEach((card) => {
+
+    card.addEventListener("mousemove", (event) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const rotateY = ((x / rect.width) - 0.5) * 6;
+        const rotateX = ((y / rect.height) - 0.5) * -6;
+
+        card.style.transform =
+            `perspective(1000px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-8px)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "";
+
+    });
+
+});
+
+<<<<<<< HEAD
+/* ==========================================================
+   RÁDIO
+========================================================== */
+
+const audioButtons = document.querySelectorAll(".audio-play");
+
+let currentAudio = null;
+let currentButton = null;
+let currentProgress = null;
+
+/* ==========================================================
+   PLAYER
+========================================================== */
+
+audioButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const audioSrc = button.dataset.audio;
+
+        /* Se clicou no mesmo áudio */
+
+        if (
+            currentAudio &&
+            currentAudio.src.includes(audioSrc)
+        ) {
+
+            if (currentAudio.paused) {
+
+                currentAudio.play();
+                button.textContent = "❚❚";
+
+            } else {
+
+                currentAudio.pause();
+                button.textContent = "▶";
+
+            }
+
+            return;
+
+        }
+
+        /* Fecha áudio anterior */
+
+        if (currentAudio) {
+
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+
+            if (currentButton) {
+                currentButton.textContent = "▶";
+            }
+
+            if (currentProgress) {
+                currentProgress.style.width = "0%";
+            }
+
+        }
+
+        /* Novo áudio */
+
+        currentAudio = new Audio(audioSrc);
+
+        currentButton = button;
+
+        currentProgress = button
+            .closest(".audio-player")
+            .querySelector(".audio-progress-fill");
+
+        currentAudio.play();
+
+        button.textContent = "❚❚";
+
+        /* Barra */
+
+        currentAudio.addEventListener("timeupdate", () => {
+
+            const percent =
+                (currentAudio.currentTime / currentAudio.duration) * 100;
+
+            currentProgress.style.width = `${percent}%`;
+
+        });
+
+        /* Terminou */
+
+        currentAudio.addEventListener("ended", () => {
+
+            button.textContent = "▶";
+
+            currentProgress.style.width = "0%";
+
+        });
+=======
+
+// ==========================================
+// COMPETÊNCIAS
+// ==========================================
+
+const skillCards = document.querySelectorAll(".skill-card");
+
+if (skillCards.length) {
+
+    const skillsObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.isIntersecting) {
+
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 100);
+
+                skillsObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    skillCards.forEach(card => skillsObserver.observe(card));
+
+}
+
+// ==========================================
+// EFEITO 3D SUAVE
+// ==========================================
+
+skillCards.forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = (x - rect.width / 2) / 25;
+        const rotateX = -(y - rect.height / 2) / 25;
+
+        card.style.transform =
+            `perspective(1000px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-8px)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+>>>>>>> 63d4e4d (inicio limpo)
+
+    });
+
+});
+
+<<<<<<< HEAD
+/* ==========================================================
+   VTS E AUDIOVISUAL
+========================================================== */
+
+
+/* ==========================================================
+   FILTROS
+========================================================== */
+
+const vtFilters = document.querySelectorAll(".vt-filter");
+const vtCards = document.querySelectorAll(".vt-card");
+
+
+vtFilters.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+
+        // Remove ativo
+
+        vtFilters.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+
+        button.classList.add("active");
+
+
+        const filter = button.dataset.filter;
+
+
+
+        vtCards.forEach((card) => {
+
+            const category = card.dataset.category;
+
+
+            if (
+                filter === "all" ||
+                category === filter
+            ) {
+
+                card.classList.remove("hide");
+
+            } else {
+
+                card.classList.add("hide");
+=======
+// ==========================================
+// BASTIDORES
+// ==========================================
+
+const backstageCards = document.querySelectorAll(".backstage-card");
+const backstageLightbox = document.querySelector(".backstage-lightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxCaption = document.querySelector(".lightbox-caption");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+// ==========================================
+// ANIMAÇÃO NO SCROLL
+// ==========================================
+
+if (backstageCards.length) {
+
+    const backstageObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.isIntersecting) {
+
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 80);
+
+                backstageObserver.unobserve(entry.target);
+>>>>>>> 63d4e4d (inicio limpo)
+
+            }
+
+        });
+
+<<<<<<< HEAD
+
+    });
+
+});
+
+
+
+
+
+/* ==========================================================
+   ABRIR VÍDEOS
+========================================================== */
+
+const vtPlayButtons = document.querySelectorAll(".vt-play");
+
+
+vtPlayButtons.forEach((button) => {
+
+
+    button.addEventListener("click", () => {
+
+
+        const videoId = button.dataset.video;
+
+
+        if (!videoModal || !videoFrame) return;
+
+
+        videoFrame.src =
+            `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+
+        videoModal.classList.add("active");
+
+
+        document.body.style.overflow = "hidden";
+
+
+    });
+
+=======
+    }, {
+        threshold: 0.15
+    });
+
+    backstageCards.forEach(card => backstageObserver.observe(card));
+
+}
+
+// ==========================================
+// LIGHTBOX
+// ==========================================
+
+backstageCards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const image = card.querySelector("img");
+        const title = card.querySelector("h3");
+
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = title.textContent;
+
+        backstageLightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+// ==========================================
+// FECHAR LIGHTBOX
+// ==========================================
+
+function closeLightbox() {
+
+    backstageLightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+// Fecha clicando no fundo
+
+backstageLightbox.addEventListener("click", (e) => {
+
+    if (e.target === backstageLightbox) {
+        closeLightbox();
+    }
+
+});
+
+// Fecha com ESC
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape" && backstageLightbox.classList.contains("active")) {
+        closeLightbox();
+    }
+
+});
+
+// ==========================================
+// EFEITO 3D SUAVE
+// ==========================================
+
+backstageCards.forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = (x - rect.width / 25) / 20;
+        const rotateX = -(y - rect.height / 25) / 20;
+
+        card.style.transform =
+            `perspective(1000px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-8px)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+
+    });
+
+});
+
+
+// ==========================================
+// FERRAMENTAS
+// ==========================================
+
+const toolCards = document.querySelectorAll(".tool-card");
+
+if (toolCards.length) {
+
+    const toolsObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.isIntersecting) {
+
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 80);
+
+                toolsObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    toolCards.forEach(card => toolsObserver.observe(card));
+
+}
+
+// ==========================================
+// EFEITO 3D SUAVE
+// ==========================================
+
+toolCards.forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = (x - rect.width / 2) / 28;
+        const rotateX = -(y - rect.height / 2) / 28;
+
+        card.style.transform =
+            `perspective(1000px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-8px)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+
+    });
+
+});
+
+// ==========================================
+// FOOTER
+// ==========================================
+
+const footerItems = document.querySelectorAll(".footer-content > *");
+
+if (footerItems.length) {
+
+    const footerObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.isIntersecting) {
+
+                setTimeout(() => {
+
+                    entry.target.classList.add("visible");
+
+                }, index * 150);
+
+                footerObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    footerItems.forEach(item => footerObserver.observe(item));
+
+}
+
+// ==========================================
+// HOVER NAS REDES SOCIAIS
+// ==========================================
+
+document.querySelectorAll(".footer-social a").forEach(link => {
+
+    link.addEventListener("mousemove", (e) => {
+
+        const rect = link.getBoundingClientRect();
+
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        link.style.transform =
+            `translate(${x * 0.08}px, ${y * 0.08}px) translateY(-6px)`;
+
+    });
+
+    link.addEventListener("mouseleave", () => {
+
+        link.style.transform = "";
+
+    });
+>>>>>>> 63d4e4d (inicio limpo)
+
+});

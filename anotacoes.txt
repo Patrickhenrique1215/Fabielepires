@@ -1,0 +1,729 @@
+Como o público é **recrutador**, eu faria um portfólio muito diferente de um site comum. A pessoa que está contratando geralmente dedica poucos minutos a cada candidato. O objetivo do site é responder rapidamente:
+
+* Quem é ela?
+* Em que ela é boa?
+* Onde ela já trabalhou?
+* Como ela se comunica?
+* Quero entrevistar essa pessoa?
+
+Eu faria um site bem limpo, elegante e jornalístico, evitando animações exageradas.
+
+---
+
+# Estrutura da página
+
+## Hero (primeira dobra)
+
+Uma foto profissional grande à esquerda e, à direita:
+
+> **Nome Completo**
+>
+> Jornalista | Repórter de TV | Produção | Rádio
+
+Um pequeno texto.
+
+> Jornalista em início de carreira com experiência em reportagem para televisão, produção jornalística e conteúdo para rádio. Interesse em jornalismo político, cotidiano e produção audiovisual.
+
+Logo abaixo:
+
+* 📄 Baixar currículo
+* ✉️ Entrar em contato
+* LinkedIn
+* E-mail
+
+---
+
+# Um vídeo em destaque
+
+Logo abaixo do Hero.
+
+Uma reportagem considerada a melhor.
+
+Grande.
+
+Tipo:
+
+> Reportagem em destaque
+
+Vídeo do YouTube.
+
+Ao lado:
+
+Título
+
+Onde foi exibida
+
+Ano
+
+Resumo
+
+Tempo de duração
+
+Botão:
+
+> Ver reportagem completa
+
+Isso já prende o recrutador.
+
+---
+
+# Estatísticas rápidas
+
+Uma seção simples.
+
+```
++18 reportagens
+
++40 VTs editados
+
+Experiência em TV
+
+Experiência em Rádio
+
+Produção jornalística
+```
+
+Esses números passam sensação de experiência rapidamente.
+
+---
+
+# Trabalhos
+
+Essa será a principal parte.
+
+Separaria por categorias.
+
+## Reportagens para TV
+
+Cards.
+
+Cada card:
+
+Imagem do vídeo
+
+Título
+
+Emissora
+
+Ano
+
+30 palavras de descrição
+
+Botão assistir
+
+---
+
+## Rádio Câmara
+
+Mesmo modelo.
+
+Ícone de áudio.
+
+Player pequeno.
+
+Descrição.
+
+---
+
+## Produção
+
+Muito importante.
+
+Muita gente acha que produção "não aparece".
+
+Na verdade recrutador gosta.
+
+Cada produção teria:
+
+Nome da matéria
+
+Programa
+
+Função exercida
+
+Exemplo:
+
+> Produção da pauta
+
+> Agendamento das entrevistas
+
+> Apuração
+
+> Organização das gravações
+
+> Apoio à equipe
+
+Mesmo sem aparecer, demonstra capacidade.
+
+---
+
+## VTs
+
+Essa parte pode ficar bonita.
+
+Grid.
+
+Cada VT:
+
+Thumbnail
+
+Título
+
+Duração
+
+Tema
+
+Botão assistir
+
+---
+
+# Linha do tempo
+
+Fica muito elegante.
+
+```
+2026
+
+Estágio na TV X
+
+↓
+
+Produção para TV Câmara
+
+↓
+
+Reportagens para TV
+
+↓
+
+Conteúdo para Rádio
+```
+
+Ajuda muito o recrutador.
+
+---
+
+# Competências
+
+Ao invés de barrinhas de progresso (que já ficaram ultrapassadas), faria cartões.
+
+Exemplo
+
+🎤 Reportagem
+
+📹 Produção
+
+🎧 Rádio
+
+✍️ Redação
+
+📷 Captação
+
+🎬 Roteiro
+
+📅 Produção de pauta
+
+📰 Apuração
+
+🎙️ Locução
+
+---
+
+# Bastidores
+
+Essa seção diferencia.
+
+Fotos dela trabalhando.
+
+Segurando microfone.
+
+Em gravações.
+
+Na redação.
+
+Em coletiva.
+
+No estúdio.
+
+No rádio.
+
+Isso humaniza.
+
+---
+
+# Depoimentos
+
+Se tiver.
+
+Professor.
+
+Editor.
+
+Chefe.
+
+Supervisor.
+
+Mesmo que sejam dois.
+
+---
+
+# Sobre
+
+Não faria um texto enorme.
+
+Algo como:
+
+> Sou jornalista apaixonada por contar histórias que impactam a sociedade. Tenho experiência em televisão, rádio e produção jornalística, desenvolvendo reportagens, pautas e conteúdos audiovisuais.
+
+Foto diferente.
+
+---
+
+# Formação
+
+Bem simples.
+
+Faculdade
+
+Cursos
+
+Certificados
+
+---
+
+# Ferramentas
+
+Uma seção interessante.
+
+Adobe Premiere
+
+CapCut
+
+Audition
+
+OBS
+
+Pacote Office
+
+Canva
+
+Ferramentas de IA (se usar)
+
+---
+
+# Contato
+
+Muito simples.
+
+Nome
+
+E-mail
+
+Telefone
+
+LinkedIn
+
+Botão WhatsApp
+
+---
+
+# Componentes interessantes
+
+## Cards de reportagem
+
+Imagem grande.
+
+Título.
+
+Resumo.
+
+Botão.
+
+---
+
+## Player de áudio
+
+Bem limpo.
+
+Play
+
+Tempo
+
+Descrição
+
+---
+
+## Modal
+
+Ao clicar numa reportagem.
+
+Abre:
+
+Vídeo
+
+Descrição completa
+
+Objetivo da matéria
+
+Competências utilizadas
+
+Duração
+
+---
+
+## Filtros
+
+Muito útil.
+
+```
+Todos
+
+TV
+
+Rádio
+
+Produção
+
+VTs
+```
+
+O recrutador acha tudo rapidamente.
+
+---
+
+## Busca
+
+Pesquisar por tema.
+
+```
+Mobilidade
+
+Política
+
+Saúde
+
+Educação
+```
+
+---
+
+## Timeline
+
+Vertical.
+
+Muito elegante.
+
+---
+
+## Galeria
+
+Fotos dos bastidores.
+
+Grid.
+
+---
+
+## FAQ (opcional)
+
+Algumas perguntas rápidas:
+
+Disponibilidade?
+
+Cidade?
+
+CNH?
+
+Disponibilidade para viagens?
+
+Idiomas?
+
+---
+
+# Um diferencial que quase ninguém faz
+
+Para cada trabalho, mostrar claramente **qual foi a participação dela**.
+
+Exemplo:
+
+---
+
+### Aumento dos casos de dengue
+
+📺 TV Câmara
+
+**Minha atuação**
+
+✅ Apuração
+
+✅ Produção da pauta
+
+✅ Entrevistas
+
+✅ Reportagem
+
+---
+
+### Sessão especial da Câmara
+
+🎙 Rádio Câmara
+
+**Minha atuação**
+
+✅ Texto
+
+✅ Locução
+
+✅ Edição
+
+---
+
+### Projeto Cultural
+
+📺 TV
+
+**Minha atuação**
+
+✅ Produção
+
+✅ Contato com entrevistados
+
+✅ Organização das gravações
+
+---
+
+Isso evita que o recrutador fique se perguntando:
+
+> "Ela fez tudo isso ou só ajudou?"
+
+---
+
+## Um detalhe que faria muita diferença
+
+Em vez de organizar apenas pelo **tipo de mídia** (TV, rádio, produção), considere organizar também por **competências**, porque é assim que muitos recrutadores avaliam candidatos.
+
+Por exemplo:
+
+* **Reportagem** — matérias em que ela aparece como repórter.
+* **Produção Jornalística** — trabalhos em que fez pesquisa, pauta, contato com fontes e organização das gravações.
+* **Áudio e Rádio** — conteúdos para a Rádio Câmara.
+* **VTs e Audiovisual** — reportagens editadas e vídeos produzidos.
+* **Coberturas Especiais** — eleições, eventos, sessões, entrevistas exclusivas ou grandes reportagens.
+
+Essa organização evidencia rapidamente a versatilidade da candidata e permite que o recrutador encontre exemplos da habilidade que mais interessa para a vaga. Além disso, cada item pode destacar informações como **veículo**, **data**, **tema**, **tempo de duração** e, principalmente, **qual foi o papel dela no projeto**, tornando o portfólio muito mais convincente do que uma simples lista de vídeos.
+
+
+portfolio-jornalista/
+
+│
+├── index.html
+│
+├── css/
+│     style.css
+│     animations.css
+│     responsive.css
+│
+├── js/
+│     main.js
+│     scroll.js
+│     animations.js
+│
+├── img/
+│      perfil.jpg
+│      hero.jpg
+│      reportagens/
+│      bastidores/
+│      thumbs/
+│
+├── videos/
+│
+├── audio/
+│
+└── arquivos/
+       curriculo.pdf
+
+
+Componentes que eu faria ==============================
+
+✔ Hero
+
+✔ Sobre
+
+✔ Estatísticas animadas
+
+✔ Reportagem destaque
+
+✔ Grid de reportagens
+
+✔ Player de áudio bonito
+
+✔ Produções
+
+✔ Timeline
+
+✔ Competências
+
+✔ Bastidores
+
+✔ Depoimentos
+
+✔ Formação
+
+✔ Ferramentas
+
+✔ Contato
+
+✔ Footer
+
+
+Ordem que eu sugiro
+1️⃣ Hero
+
+Entrega completa.
+
+HTML
+CSS
+JS
+
+Com:
+
+Foto da jornalista
+Nome
+Cargo
+Pequena apresentação
+Botões
+Redes sociais
+Fundo bonito
+Parallax leve
+Fade-in
+Responsivo
+2️⃣ Navbar
+Transparente
+Vira branca ao scroll
+Menu mobile
+Scroll suave
+Item ativo conforme a seção
+3️⃣ Estatísticas
++18 Reportagens
+
++40 VTs
+
+2 emissoras
+
+3 áreas de atuação
+
+Com contador animado.
+
+4️⃣ Reportagem destaque
+
+Um vídeo enorme.
+
+Thumbnail.
+
+Descrição.
+
+Botão assistir.
+
+Modal.
+
+5️⃣ Reportagens
+
+Cards.
+
+Filtro.
+
+Hover.
+
+Animações.
+
+6️⃣ Rádio
+
+Player bonito.
+
+Wave animada.
+
+Play.
+
+7️⃣ Produções
+
+Cards explicando a participação.
+
+8️⃣ VTs
+
+Galeria.
+
+Hover.
+
+Modal.
+
+9️⃣ Timeline
+
+Animada.
+
+Linha crescendo conforme scroll.
+
+🔟 Competências
+
+Cards.
+
+Ícones.
+
+11️⃣ Bastidores
+
+Galeria Masonry.
+
+Lightbox.
+
+12️⃣ Depoimentos
+
+Carousel.
+
+13️⃣ Formação
+
+Timeline horizontal.
+
+14️⃣ Ferramentas
+
+Cards.
+
+15️⃣ Contato
+
+Formulário.
+
+Mapa opcional.
+
+16️⃣ Footer
+
+Minimalista.
+
+
+
+
+Efeitos==============================================
+
+Aparecendo no scroll
+
+Fade
+
+Slide
+
+Zoom
+
+Hover
+
+Parallax
+
+Glassmorphism leve
+
+Blur
+
+Glow discreto
+
+Gradiente animado
+
+Scroll suave
+
+Cards inclinando alguns graus ao mover o mouse
+
+Nada chamativo.
+
+Tudo elegante.
