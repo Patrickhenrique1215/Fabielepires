@@ -118,7 +118,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 window.addEventListener("resize", () => {
 
-    if (window.innerWidth > 992) {
+    if (window.innerWidth > 991) {
 
         mobileMenu.classList.remove("active");
         menuToggle.classList.remove("active");
