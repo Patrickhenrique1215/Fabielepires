@@ -262,63 +262,50 @@ function initScrollIndicator(){
 }
 
 
-/* ==========================================================
-   REPORTAGEM EM DESTAQUE
-========================================================== */
 
-/*
-|--------------------------------------------------------------------------
-| IMPORTANTE
-|--------------------------------------------------------------------------
-|
-| Troque o ID abaixo pelo ID do seu vídeo no YouTube.
-|
-| Exemplo:
-| https://www.youtube.com/watch?v=AbCdEfGh123
-|
-| ID = AbCdEfGh123
-|
-*/
+/* ============================================================================================================
+   REPORTAGEM EM DESTAQUE - JS CORRIGIDO
+=========================================================================================================== */
 
-const FEATURED_VIDEO_ID = "AbCdEfGh123";
+document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('openFeaturedVideo');
+    const modal = document.getElementById('videoModal');
+    const closeBtn = document.getElementById('closeVideoBtn');
+    const overlay = document.getElementById('closeVideoOverlay');
+    const iframe = document.getElementById('youtubeIframe');
 
-const videoModal = document.getElementById("videoModal");
-const videoFrame = document.getElementById("featuredVideoFrame");
+    // ID limpo do vídeo
+    const youtubeVideoId = 'Oc2_utq1Eoo'; 
 
-const openVideoButton = document.getElementById("openFeaturedVideo");
-const watchFeaturedButton = document.getElementById("watchFeaturedButton");
+    function openModal() {
+        // Usamos o domínio padrão com enablejsapi=1 e rel=0
+        iframe.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0&enablejsapi=1`;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
 
-const closeVideoButton = document.getElementById("closeVideoModal");
-const modalOverlay = document.querySelector(".video-modal-overlay");
+    function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        iframe.src = ''; // Limpa a URL para parar a reprodução
+    }
 
-/* ==========================================================
-   ABRIR MODAL
-========================================================== */
+    // Eventos
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
 
-function openFeaturedVideo() {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
 
-    videoFrame.src =
-        `https://www.youtube.com/embed/${FEATURED_VIDEO_ID}?autoplay=1&rel=0`;
 
-    videoModal.classList.add("active");
 
-    document.body.style.overflow = "hidden";
-
-}
-
-/* ==========================================================
-   FECHAR MODAL
-========================================================== */
-
-function closeFeaturedVideo() {
-
-    videoModal.classList.remove("active");
-
-    videoFrame.src = "";
-
-    document.body.style.overflow = "";
-
-}
 
 /* ==========================================================
    EVENTOS

@@ -348,222 +348,98 @@
     </section>
 
 
-
-    <!-- ===================================================== -->
-    <!-- REPORTAGEM EM DESTAQUE -->
-    <!-- ===================================================== -->
-
-    <section class="featured-report section" id="destaque">
-
-        <div class="container">
-
-            <!-- ======================================= -->
-            <!-- TÍTULO -->
-            <!-- ======================================= -->
-
-            <div class="section-header">
-
-                <span class="section-tag">
-                    Reportagem em destaque
-                </span>
-
-                <h2 class="section-title">
-                    Um trabalho que representa minha forma de fazer jornalismo
-                </h2>
-
-                <p class="section-description">
-                    Uma das reportagens que melhor demonstra minha atuação em
-                    televisão, desde a apuração até a apresentação do conteúdo,
-                    sempre com compromisso, responsabilidade e interesse público.
-                </p>
-
-            </div>
-
-
-
-
-
-            <!-- ======================================= -->
-            <!-- CONTEÚDO -->
-            <!-- ======================================= -->
-
-            <div class="featured-content">
-
-                <!-- =================================== -->
-                <!-- THUMBNAIL -->
-                <!-- =================================== -->
-
-                <div class="featured-video">
-
-                    <div class="video-thumbnail">
-
-                        <img
-                            src="img/thumbs/idosos.png"
-                            alt="Reportagem sobre projetos de combate ao câncer e a desnutrição nos idosos"
-                        >
-
-                        <button
-                            class="play-button"
-                            id="openFeaturedVideo"
-                            aria-label="Assistir reportagem"
-                        >
-
-                            <span>▶</span>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-
-
-                <!-- =================================== -->
-                <!-- INFORMAÇÕES -->
-                <!-- =================================== -->
-
-                <div class="featured-info">
-
-                    <span class="featured-category">
-                        📺 Reportagem para TV
-                    </span>
-
-                    <h3 class="featured-title">
-                        Projetos combatem o câncer e a desnutrição de idosos
-                    </h3>
-
-                    <p class="featured-description">
-
-                        Breve resumo da reportagem. Explique o contexto,
-                        a importância da pauta e os principais pontos
-                        abordados durante a cobertura, despertando o
-                        interesse do recrutador em assistir ao material.
-
-                    </p>
-
-
-
-
-
-                    <!-- METADADOS -->
-
-                    <div class="featured-meta">
-
-                        <div class="meta-item">
-
-                            <span class="meta-label">
-                                Emissora
-                            </span>
-
-                            <strong>
-                                TV Câmara
-                            </strong>
-
-                        </div>
-
-                        <div class="meta-item">
-
-                            <span class="meta-label">
-                                Ano
-                            </span>
-
-                            <strong>
-                                2026
-                            </strong>
-
-                        </div>
-
-                        <div class="meta-item">
-
-                            <span class="meta-label">
-                                Duração
-                            </span>
-
-                            <strong>
-                                01:49
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-                    <!-- MINHA ATUAÇÃO -->
-
-                    <div class="featured-role">
-
-                        <h4>
-                            Minha atuação
-                        </h4>
-
-                        <ul>
-
-                            <li>Apuração</li>
-
-                            <li>Produção da pauta</li>
-
-                            <li>Entrevistas</li>
-
-                            <li>Reportagem</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+<!--- ============================================================================================================
+   REPORTAGEM EM DESTAQUE 
+==================================================== -->
+
+
+   <section class="featured-report section" id="destaque">
+    <div class="container">
+
+        <!-- TÍTULO DA SEÇÃO -->
+        <div class="section-header">
+            <span class="section-tag">Reportagem em destaque</span>
+            <h2 class="section-title">Um trabalho que representa minha forma de fazer jornalismo</h2>
+            <p class="section-description">
+                Uma das reportagens que melhor demonstra minha atuação em televisão, desde a apuração até a apresentação do conteúdo, sempre com compromisso, responsabilidade e interesse público.
+            </p>
         </div>
 
-    </section>
+        <!-- INFORMAÇÕES E DETALHES -->
+        <div class="featured-info">
+            <span class="featured-category">📺 Reportagem para TV</span>
 
+            <h3 class="featured-title">Projetos combatem o câncer e a desnutrição de idosos</h3>
 
+            <p class="featured-description">
+                Breve resumo da reportagem QUE A FABIELE VAI FAZER Explicando o contexto, a importância da pauta e os principais pontos abordados durante a cobertura, despertando o interesse do recrutador em assistir o video.
+            </p>
 
+            <!-- METADADOS -->
+            <div class="featured-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Emissora</span>
+                    <strong>TV Câmara</strong>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Ano</span>
+                    <strong>2026</strong>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duração</span>
+                    <strong>01:49</strong>
+                </div>
+            </div>
+        </div>
 
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="featured-content">
 
-    <!-- ===================================================== -->
-    <!-- MODAL DO VÍDEO -->
-    <!-- ===================================================== -->
+            <!-- THUMBNAIL DO VÍDEO (Primeiro no Mobile) -->
+            <div class="featured-video">
+                <div class="video-thumbnail">
+                    <img src="img/thumbs/idosos.png" alt="Reportagem sobre projetos de combate ao câncer e a desnutrição nos idosos">
+                    <button class="play-button" id="openFeaturedVideo" aria-label="Assistir reportagem no modal">
+                        <span>▶</span>
+                    </button>
+                </div>
+            </div>
 
-    <div
-        class="video-modal"
-        id="videoModal"
-    >
-
-        <div class="video-modal-overlay"></div>
-
-        <div class="video-modal-content">
-
-            <button
-                class="video-modal-close"
-                id="closeVideoModal"
-                aria-label="Fechar vídeo"
-            >
-                &times;
-            </button>
-
-            <div class="video-wrapper">
-
-                <iframe
-                    id="featuredVideoFrame"
-                    src=""
-                    title="Reportagem em destaque"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
+             <!-- MINHA ATUAÇÃO -->
+            <div class="featured-info">
+                <div class="featured-role">
+                    <h4>Minha atuação (QUE A FABIELE TA ENROLANDO PRA ME ENVIAR)</h4>
+                    <ul>
+                        <li>Apuração</li>
+                        <li>Produção da pauta</li>
+                        <li>Entrevistas</li>
+                        <li>Reportagem</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
 
     </div>
+</section>
 
+
+<!-- MODAL DO VÍDEO -->
+<div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-modal-overlay" id="closeVideoOverlay"></div>
+    <div class="video-modal-content">
+        <button class="video-modal-close" id="closeVideoBtn" aria-label="Fechar vídeo">&times;</button>
+        <div class="video-wrapper">
+            <iframe 
+                id="youtubeIframe" 
+                src="" 
+                title="Vídeo do YouTube" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
 
 
     <!-- ===================================================== -->
