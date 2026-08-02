@@ -264,7 +264,7 @@ function initScrollIndicator(){
 
 
 /* ============================================================================================================
-   REPORTAGEM EM DESTAQUE - JS CORRIGIDO
+   REPORTAGEM EM DESTAQUE 
 =========================================================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -361,10 +361,14 @@ const statsSection = document.querySelector(".stats");
 const statNumbers = document.querySelectorAll(".stat-number");
 
 let statsAnimated = false;
-
 /* ==========================================================
    ANIMAR CONTADORES
 ========================================================== */
+
+// DECLARAÇÃO DAS VARIÁVEIS (isso estava faltando!)
+const statsSection = document.querySelector('.stats');
+const statNumbers = document.querySelectorAll('.stat-number');
+let statsAnimated = false;
 
 function animateStats() {
 
@@ -415,7 +419,6 @@ function animateStats() {
 window.addEventListener("scroll", animateStats);
 
 window.addEventListener("load", animateStats);
-
 
 /* ==========================================================
    TRABALHOS

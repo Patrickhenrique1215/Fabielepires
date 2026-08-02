@@ -242,3 +242,84 @@
 
 }
 
+
+
+
+
+/* ===== RESPONSIVO ========================================================== */
+
+@media (min-width: 768px) {
+    .featured-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        padding: 28px 40px;
+    }
+    
+    .featured-video {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .featured-left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .stats-grid {
+     
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (min-width: 992px) {
+    .featured-report {
+        padding: 80px 0;
+    }
+
+    .featured-report::before {
+        width: 420px;
+        height: 420px;
+    }
+
+    .featured-content {
+        gap: 60px;
+        align-items: center;
+    }
+
+    .video-thumbnail {
+        border-radius: 28px;
+    }
+
+    .play-button {
+        width: 88px;
+        height: 88px;
+        font-size: 2rem;
+    }
+
+    .featured-title {
+        font-size: 2.4rem;
+    }
+
+    .meta-item {
+        padding: 16px;
+        text-align: left;
+    }
+
+    .meta-label {
+        font-size: .8rem;
+    }
+
+    .meta-item strong {
+        font-size: 1rem;
+    }
+
+    .video-modal-close {
+        top: -55px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.6rem;
+    }
+}

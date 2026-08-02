@@ -283,6 +283,22 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =======================================================================================================================================
    HERO
 ======================================================================================================================================= */
@@ -880,6 +896,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 /* ============================================================================================================
    REPORTAGEM EM DESTAQUE
 =========================================================================================================== */
@@ -903,7 +928,7 @@
     pointer-events: none;
 }
 
-/* ==== CONTEÚDO (Mobile: Empilhado) ================================== */
+/* ==== CONTEÚDO ================================== */
 
 .featured-content {
     display: flex;
@@ -964,13 +989,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 4px; /* Ajuste óptico do ícone de play */
+    padding-left: 4px;
 }
 
 .play-button:hover {
     transform: scale(1.1);
     background: #fff;
     box-shadow: 0 12px 30px rgba(59,130,246,.35);
+}
+
+/* ===== LADO ESQUERDO ======================================================== */
+
+.featured-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 /* ===== INFO ========================================================== */
@@ -1146,72 +1179,15 @@
     transform: rotate(90deg);
 }
 
-/* ============================================================================================================
-   DESKTOP / SCREENS >= 992px
-=========================================================================================================== */
 
-@media (min-width: 992px) {
-    .featured-report {
-        padding: 80px 0;
-    }
 
-    .featured-report::before {
-        width: 420px;
-        height: 420px;
-    }
 
-    .featured-content {
-        display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
 
-    /* Inverte a ordem no Desktop para que as informações fiquem à esquerda e a mídia à direita */
-    .featured-info {
-        grid-column: 1;
-        grid-row: 1;
-    }
 
-    .featured-video {
-        grid-column: 2;
-        grid-row: 1;
-    }
 
-    .video-thumbnail {
-        border-radius: 28px;
-    }
 
-    .play-button {
-        width: 88px;
-        height: 88px;
-        font-size: 2rem;
-    }
 
-    .featured-title {
-        font-size: 2.4rem;
-    }
 
-    .meta-item {
-        padding: 16px;
-        text-align: left;
-    }
-
-    .meta-label {
-        font-size: .8rem;
-    }
-
-    .meta-item strong {
-        font-size: 1rem;
-    }
-
-    .video-modal-close {
-        top: -55px;
-        width: 46px;
-        height: 46px;
-        font-size: 1.6rem;
-    }
-}
 
 
 /* =======================================================
@@ -1259,13 +1235,11 @@
     pointer-events: none;
 }
 
-/* =======================================================
-   HEADER
-======================================================= */
+/* ===HEADER================================================= */
 
 .section-header {
     max-width: 760px;
-    margin: 0 auto 70px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -1304,21 +1278,18 @@
     line-height: 1.8;
 }
 
-/* =======================================================
-   GRID
-======================================================= */
+/* =====GRID============================================= */
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     position: relative;
     z-index: 2;
+    padding: 0 10px;
 }
 
-/* =======================================================
-   CARD
-======================================================= */
+/* CARD=============================================== */
 
 .stat-card {
     position: relative;
@@ -1329,8 +1300,6 @@
 
     border-radius: 28px;
 
-    padding: 38px 30px;
-
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
@@ -1338,6 +1307,8 @@
         transform .35s ease,
         box-shadow .35s ease,
         border-color .35s ease;
+
+    padding: 0 6px;    
 }
 
 .stat-card:hover {
@@ -1372,14 +1343,12 @@
     );
 }
 
-/* =======================================================
-   ÍCONE
-======================================================= */
+/* ======ÍCONE======================================= */
 
 .stat-icon {
 
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
 
     display: flex;
     align-items: center;
@@ -1399,15 +1368,13 @@
 
 }
 
-/* =======================================================
-   NÚMERO
-======================================================= */
+/* ====NÚMERO============================================ */
 
 .stat-number {
 
     display: block;
 
-    margin-bottom: 14px;
+    margin-bottom: 4px;
 
     font-size: clamp(2.8rem,4vw,3.5rem);
 
@@ -1425,25 +1392,21 @@
     content: "+";
 }
 
-/* =======================================================
-   TÍTULO
-======================================================= */
+/* ====TÍTULO=========================================== */
 
 .stat-title {
 
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     font-weight: 600;
 
     color: var(--text);
 
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 
 }
 
-/* =======================================================
-   TEXTO
-======================================================= */
+/* ==TEXTO============================================ */
 
 .stat-text {
 
@@ -1451,13 +1414,13 @@
 
     line-height: 1.8;
 
-    font-size: .95rem;
+    font-size: .6rem;
 
 }
 
 /* =======================================================
    TRABALHOS
-======================================================= */
+=================================================== */
 
 .works {
     position: relative;
