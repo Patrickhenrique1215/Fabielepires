@@ -132,7 +132,6 @@ window.addEventListener("resize", () => {
 
 /* ==========================================================
    HERO
-   Arquivo: js/main.js
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -263,162 +262,53 @@ function initScrollIndicator(){
 
 
 
-/* ============================================================================================================
-   REPORTAGEM EM DESTAQUE 
-=========================================================================================================== */
-
-document.addEventListener('DOMContentLoaded', () => {
-    const openBtn = document.getElementById('openFeaturedVideo');
-    const modal = document.getElementById('videoModal');
-    const closeBtn = document.getElementById('closeVideoBtn');
-    const overlay = document.getElementById('closeVideoOverlay');
-    const iframe = document.getElementById('youtubeIframe');
-
-    // ID limpo do vídeo
-    const youtubeVideoId = 'Oc2_utq1Eoo'; 
-
-    function openModal() {
-        // Usamos o domínio padrão com enablejsapi=1 e rel=0
-        iframe.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0&enablejsapi=1`;
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        iframe.src = ''; // Limpa a URL para parar a reprodução
-    }
-
-    // Eventos
-    if (openBtn) openBtn.addEventListener('click', openModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (overlay) overlay.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-});
-
-
-
-
-/* ==========================================================
-   EVENTOS
-========================================================== */
-
-if (openVideoButton) {
-
-    openVideoButton.addEventListener("click", openFeaturedVideo);
-
-}
-
-if (watchFeaturedButton) {
-
-    watchFeaturedButton.addEventListener("click", openFeaturedVideo);
-
-}
-
-if (closeVideoButton) {
-
-    closeVideoButton.addEventListener("click", closeFeaturedVideo);
-
-}
-
-if (modalOverlay) {
-
-    modalOverlay.addEventListener("click", closeFeaturedVideo);
-
-}
-
-/* ==========================================================
-   ESC
-========================================================== */
-
-document.addEventListener("keydown", (event) => {
-
-    if (
-        event.key === "Escape" &&
-        videoModal.classList.contains("active")
-    ) {
-
-        closeFeaturedVideo();
-
-    }
-
-});
-
 
 /* ==========================================================
    ESTATÍSTICAS
 ========================================================== */
-
 const statsSection = document.querySelector(".stats");
 const statNumbers = document.querySelectorAll(".stat-number");
 
-let statsAnimated = false;
-/* ==========================================================
-   ANIMAR CONTADORES
-========================================================== */
-
-// DECLARAÇÃO DAS VARIÁVEIS (isso estava faltando!)
-const statsSection = document.querySelector('.stats');
-const statNumbers = document.querySelectorAll('.stat-number');
-let statsAnimated = false;
-
 function animateStats() {
-
-    if (statsAnimated) return;
-
-    const trigger =
-        statsSection.getBoundingClientRect().top <
-        window.innerHeight * 0.8;
-
-    if (!trigger) return;
-
-    statsAnimated = true;
-
     statNumbers.forEach((number) => {
-
         const target = Number(number.dataset.target);
-
         let current = 0;
-
         const duration = 1800;
-
         const increment = target / (duration / 16);
 
         function updateCounter() {
-
             current += increment;
-
             if (current < target) {
-
                 number.textContent = Math.floor(current);
-
                 requestAnimationFrame(updateCounter);
-
             } else {
-
                 number.textContent = target;
-
             }
-
         }
 
         updateCounter();
-
     });
-
 }
 
-window.addEventListener("scroll", animateStats);
+if (statsSection) {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
 
-window.addEventListener("load", animateStats);
+                 console.log("intersecting:", entry.isIntersecting, entry.target);
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    observer.observe(statsSection);
+}
+
+
 
 /* ==========================================================
    TRABALHOS
@@ -426,10 +316,6 @@ window.addEventListener("load", animateStats);
 
 const filterButtons = document.querySelectorAll(".filter-btn");
 const workCards = document.querySelectorAll(".work-card");
-
-/* ==========================================================
-   FILTROS
-========================================================== */
 
 filterButtons.forEach((button) => {
 
@@ -465,54 +351,7 @@ filterButtons.forEach((button) => {
 
 });
 
-/* ==========================================================
-   ABRIR VÍDEO
-========================================================== */
-
-const workVideoButtons = document.querySelectorAll(
-    ".work-button[data-video]"
-);
-
-workVideoButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-        const videoId = button.dataset.video;
-
-        videoFrame.src =
-            `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-
-        videoModal.classList.add("active");
-
-        document.body.style.overflow = "hidden";
-
-    });
-
-});
-
-/* ==========================================================
-   OUVIR ÁUDIO
-========================================================== */
-
-const workAudioButtons = document.querySelectorAll(
-    ".work-button[data-audio]"
-);
-
-workAudioButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-        const audio = button.dataset.audio;
-
-        window.open(audio, "_blank");
-
-    });
-
-});
-
-/* ==========================================================
-   CARD HOVER (EFEITO 3D LEVE)
-========================================================== */
+/* =================  CARD HOVER (EFEITO 3D LEVE)========================================= */
 
 workCards.forEach((card) => {
 
@@ -541,6 +380,7 @@ workCards.forEach((card) => {
     });
 
 });
+
 
 
 // ==========================================
@@ -608,6 +448,9 @@ skillCards.forEach(card => {
 
 });
 
+
+
+
 // ==========================================
 // BASTIDORES
 // ==========================================
@@ -618,9 +461,7 @@ const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxCaption = document.querySelector(".lightbox-caption");
 const lightboxClose = document.querySelector(".lightbox-close");
 
-// ==========================================
-// ANIMAÇÃO NO SCROLL
-// ==========================================
+// ============== ANIMAÇÃO NO SCROLL===============================
 
 if (backstageCards.length) {
 
@@ -648,9 +489,7 @@ if (backstageCards.length) {
 
 }
 
-// ==========================================
-// LIGHTBOX
-// ==========================================
+// ================ LIGHTBOX===================================
 
 backstageCards.forEach(card => {
 
@@ -671,9 +510,7 @@ backstageCards.forEach(card => {
 
 });
 
-// ==========================================
-// FECHAR LIGHTBOX
-// ==========================================
+// ================ FECHAR LIGHTBOX===================================
 
 function closeLightbox() {
 
@@ -705,9 +542,7 @@ document.addEventListener("keydown", (e) => {
 
 });
 
-// ==========================================
-// EFEITO 3D SUAVE
-// ==========================================
+// =========== EFEITO 3D SUAVE===================================
 
 backstageCards.forEach(card => {
 
@@ -771,9 +606,7 @@ if (toolCards.length) {
 
 }
 
-// ==========================================
-// EFEITO 3D SUAVE
-// ==========================================
+// == EFEITO 3D SUAVE=========================================
 
 toolCards.forEach(card => {
 
@@ -838,9 +671,7 @@ if (footerItems.length) {
 
 }
 
-// ==========================================
-// HOVER NAS REDES SOCIAIS
-// ==========================================
+// =================== HOVER NAS REDES SOCIAIS=====================================
 
 document.querySelectorAll(".footer-social a").forEach(link => {
 
@@ -863,3 +694,163 @@ document.querySelectorAll(".footer-social a").forEach(link => {
     });
 
 });
+
+
+
+
+/* ============================================================================================================
+   MODAL DE VIDEO
+=========================================================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const featuredBtn = document.getElementById('openFeaturedVideo');
+    const modal = document.getElementById('videoModal');
+    const closeBtn = document.getElementById('closeVideoBtn');
+    const overlay = document.getElementById('closeVideoOverlay');
+    const iframe = document.getElementById('youtubeIframe');
+    const featuredVideoId = 'Oc2_utq1Eoo';
+
+    function openFeaturedVideo() {
+        iframe.src = `https://www.youtube.com/embed/${featuredVideoId}?autoplay=1&rel=0&enablejsapi=1`;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    if (featuredBtn) {
+        featuredBtn.addEventListener('click', openFeaturedVideo);
+    }
+
+    function openModal(videoId) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&enablejsapi=1`;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        iframe.src = '';
+    }
+
+    // Seleciona todos os cards
+    const cards = document.querySelectorAll('.work-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoId = card.getAttribute('data-video');
+            if (videoId) {
+                openModal(videoId);
+            }
+        });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
+
+
+
+/* ========  ESC  ========================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (
+        event.key === "Escape" &&
+        videoModal.classList.contains("active")
+    ) {
+
+        closeFeaturedVideo();
+
+    }
+
+});
+
+
+/* ==========================================================
+   MODAL DE AUDIO
+========================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const audioModal = document.getElementById('audioModal');
+    const closeBtn = document.getElementById('closeAudioBtn');
+    const overlay = document.getElementById('closeAudioOverlay');
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    function openAudioModal(audioPath) {
+        audioPlayer.querySelector('source').src = audioPath;
+        audioPlayer.load(); // força recarregar o arquivo
+        audioPlayer.play(); // inicia automaticamente
+        audioModal.classList.add('active');
+        audioModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeAudioModal() {
+        audioModal.classList.remove('active');
+        audioModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0; // reseta
+    }
+
+    // Exemplo: cada card com data-audio
+    const audioCards = document.querySelectorAll('.work-card[data-audio]');
+    audioCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const audioPath = card.getAttribute('data-audio');
+            if (audioPath) {
+                openAudioModal(audioPath);
+            }
+        });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeAudioModal);
+    if (overlay) overlay.addEventListener('click', closeAudioModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && audioModal.classList.contains('active')) {
+            closeAudioModal();
+        }
+    });
+});
+
+
+
+
+
+
+/* ==========================================================
+   EVENTOS
+========================================================== */
+
+if (openVideoButton) {
+
+    openVideoButton.addEventListener("click", openFeaturedVideo);
+
+}
+
+if (watchFeaturedButton) {
+
+    watchFeaturedButton.addEventListener("click", openFeaturedVideo);
+
+}
+
+if (closeVideoButton) {
+
+    closeVideoButton.addEventListener("click", closeFeaturedVideo);
+
+}
+
+if (modalOverlay) {
+
+    modalOverlay.addEventListener("click", closeFeaturedVideo);
+
+}

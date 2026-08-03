@@ -58,9 +58,6 @@
             </a>
 
 
-
-
-
             <!-- ======================================= -->
             <!-- MENU DESKTOP -->
             <!-- ======================================= -->
@@ -90,45 +87,19 @@
 
             </nav>
 
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
 
+                <span></span>
+                <span></span>
+                <span></span>
 
-
-
-            <!-- ======================================= -->
-            <!-- AÇÕES -->
-            <!-- ======================================= -->
-
-            <div class="header-actions">
-
-                <a
-                    href="arquivos/FabielePires.pdf"
-                    target="_blank"
-                    class="header-btn"
-                >
-                    Currículo
-                </a>
-
-
-
-
-
-                <!-- BOTÃO MOBILE -->
-
-                <button
-                    class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Abrir menu"
-                    aria-expanded="false"
-                    aria-controls="mobileMenu"
-                >
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </button>
-
-            </div>
+            </button>
 
         </div>
 
@@ -201,7 +172,7 @@
 
 
 
-        <div class="container hero-container">
+        <div class="hero-container">
 
             <!-- ======================================= -->
             <!-- TEXTO -->
@@ -311,7 +282,7 @@
 
                     <img
 
-                        src="img/bastidores/hgjds.jpeg"
+                        src="img/bastidores/paw.jpeg"
 
                         alt="Fabiele Pires"
 
@@ -351,8 +322,8 @@
     <!--- ============================================================================================================
     REPORTAGEM EM DESTAQUE 
     ==================================================== -->
-    <section class="featured-report section" id="destaque">
-        <div class="container">
+    <section class="featured-report" id="destaque">
+        <div>
 
             <!-- TÍTULO DA SEÇÃO -->
             <div class="section-header">
@@ -375,7 +346,7 @@
 
                         <h4 class="featured-title">Projetos combatem o câncer e a desnutrição de idosos</h4>
 
-                        <p class="featured-description">
+                        <p class="featured-description textovermelho">
                             Breve resumo da reportagem QUE A FABIELE VAI FAZER Explicando o contexto, a importância da pauta e os principais pontos abordados durante a cobertura, despertando o interesse do recrutador em assistir o video.
                         </p>
 
@@ -398,12 +369,12 @@
 
                     <!-- MINHA ATUAÇÃO -->
                     <div class="featured-role">
-                        <h4>Minha atuação (QUE A FABIELE TA ENROLANDO PRA ME ENVIAR)</h4>
+                        <h4>Minha atuação</h4>
                         <ul>
-                            <li>Apuração</li>
-                            <li>Produção da pauta</li>
-                            <li>Entrevistas</li>
-                            <li>Reportagem</li>
+                            <li><span class="textovermelho">Apuração</span></li>
+                            <li><span class="textovermelho">Produção da pauta</span></li>
+                            <li><span class="textovermelho">Entrevistas</span></li>
+                            <li><span class="textovermelho">Reportagem</span></li>
                         </ul>
                     </div>
 
@@ -414,10 +385,11 @@
                     <div class="video-thumbnail">
                         <img src="img/thumbs/idosos.png" alt="Reportagem sobre projetos de combate ao câncer e a desnutrição nos idosos">
                         <button class="play-button" id="openFeaturedVideo" aria-label="Assistir reportagem no modal">
-                            <span>▶</span>
+                        <span>▶</span>
                         </button>
                     </div>
                 </div>
+
 
             </div>
 
@@ -429,9 +401,9 @@
     <!-- ESTATÍSTICAS -->
     <!-- ===================================================== -->
 
-    <section class="stats section" id="estatisticas">
+    <section class="stats section-numeros" id="estatisticas">
 
-        <div class="container">
+        <div>
 
             <!-- ======================================= -->
             <!-- TÍTULO -->
@@ -588,17 +560,16 @@
     </section>
 
 
+
+
+
    <!-- ===================================================== -->
     <!-- TRABALHOS -->
     <!-- ===================================================== -->
 
-    <section class="works section" id="trabalhos">
+    <section class="works" id="trabalhos">
 
-        <div class="container">
-
-            <!-- ======================================= -->
-            <!-- HEADER -->
-            <!-- ======================================= -->
+        <div>
 
             <div class="section-header">
 
@@ -617,10 +588,6 @@
                 </p>
 
             </div>
-
-
-
-
 
             <!-- ======================================= -->
             <!-- FILTROS -->
@@ -664,13 +631,13 @@
                 <!-- CARD 1 - TV -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="tv">
+                <article class="work-card" data-category="tv" data-video="wsuTnqZdNC4">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/reportagem-01.jpg"
-                            alt="Título da reportagem"
+                            src="img/thumbs/thumbcredn.webp"
+                            alt="Delegação do Parlamento Europeu reúne-se com membros da Comissão de Relações Exteriores"
                             loading="lazy"
                         >
 
@@ -687,10 +654,10 @@
                         </span>
 
                         <h3 class="work-title">
-                            Título da Reportagem
+                            Delegação do Parlamento Europeu reúne-se com membros da Comissão de Relações Exteriores
                         </h3>
 
-                        <p class="work-description">
+                        <p class="work-description textovermelho">
                             Pequeno resumo da reportagem destacando o tema,
                             contexto e principais informações apresentadas.
                         </p>
@@ -699,7 +666,7 @@
 
                             <span>📅 2026</span>
 
-                            <span>⏱ 03:42</span>
+                            <span>⏱ 01:38</span>
 
                         </div>
 
@@ -719,12 +686,7 @@
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-video="AbCdEfGh123"
-                        >
-                            Assistir
-                        </button>
+                       
 
                     </div>
 
@@ -738,12 +700,12 @@
                 <!-- CARD 2 - Rádio -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="radio">
+                <article class="work-card" data-category="radio" data-audio="audios/CONSELHO.mp3">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/radio-01.jpg"
+                            src="img/thumbs/thumbradio.webp"
                             alt="Programa de Rádio"
                             loading="lazy"
                         >
@@ -761,12 +723,12 @@
                         </span>
 
                         <h3 class="work-title">
-                            Programa Especial
+                            Projeto que proíbe cobrança de consumo mínimo de água
                         </h3>
 
-                        <p class="work-description">
-                            Conteúdo produzido para rádio com foco em informação,
-                            entrevistas e cobertura jornalística.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-info">
@@ -793,12 +755,7 @@
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-audio="audio/programa.mp3"
-                        >
-                            Ouvir
-                        </button>
+                        
 
                     </div>
 
@@ -812,13 +769,13 @@
                 <!-- CARD 3 - Produção -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="producao">
+                <article class="work-card" data-category="producao" data-video="0oV7q94LhUY">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/producao-01.jpg"
-                            alt="Produção Jornalística"
+                            src="img/thumbs/thumbonibus.webp"
+                            alt="Projeto busca aumentar segurança com presença policial em ônibus"
                             loading="lazy"
                         >
 
@@ -835,12 +792,12 @@
                         </span>
 
                         <h3 class="work-title">
-                            Cobertura Especial
+                           Projeto busca aumentar segurança com presença policial em ônibus
                         </h3>
 
-                        <p class="work-description">
-                            Organização completa da pauta, entrevistas,
-                            cronograma de gravação e suporte à equipe.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-role">
@@ -861,9 +818,68 @@
 
                         </div>
 
-                        <button class="work-button">
-                            Ver detalhes
-                        </button>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 3 - Produção -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="producao" data-video="qn5jdsetLio">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/thumbteta.webp"
+                            alt="Projeto que incentiva a amamentação"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            Produção
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            TV Câmara
+                        </span>
+
+                        <h3 class="work-title">
+                           Projeto que incentiva a amamentação
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Pauta</span>
+
+                                <span>Produção</span>
+
+                                <span>Contato com Fontes</span>
+
+                                <span>Organização</span>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -877,12 +893,12 @@
                 <!-- CARD 4 - VT -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="vt">
+                <article class="work-card" data-category="vt" data-video="k9Y0Bbzep_U">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/vt-01.jpg"
+                            src="img/thumbs/thumbdistrib.webp"
                             alt="VT"
                             loading="lazy"
                         >
@@ -900,19 +916,19 @@
                         </span>
 
                         <h3 class="work-title">
-                            VT Institucional
+                           Distribuidoras de bebidas podem funcionar das 6h a meia noite
                         </h3>
 
-                        <p class="work-description">
-                            Produção audiovisual com roteiro, edição e finalização
-                            para divulgação institucional.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-info">
 
-                            <span>📅 2026</span>
+                            <span>📅 2025</span>
 
-                            <span>⏱ 02:18</span>
+                            <span>⏱ 02:01</span>
 
                         </div>
 
@@ -932,13 +948,207 @@
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-video="AbCdEfGh123"
-                        >
-                            Assistir
-                        </button>
+                 
+                    </div>
 
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="48AuBti3boU">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/lixo.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                           1.200 garis mobilizados para atuar na limpeza das ruas
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 01:17</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="dfKaMGjVCss">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/esgoto.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                           Risco à saúde: esgoto a céu aberto preocupa moradores
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 01:17</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="RPG6hDgQrrI">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/cratera.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                           Cratera se forma e estruturas de casas acabam derrubadas
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 02:50</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
                     </div>
 
                 </article>
@@ -947,17 +1157,351 @@
 
 
 
-                <!-- ================================================= -->
-                <!-- CARD 5 - TV (extra) -->
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="tv">
+                <article class="work-card" data-category="vt" data-video="wrYBfFx4cKQ">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/reportagem-02.jpg"
-                            alt="Segunda reportagem"
+                            src="img/thumbs/points.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                           como curtir de graça os points de Brasília
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 03:11</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="xQyqTiSQwf8">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/cafe.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                          Dia do café
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 01:44</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="YptFLoE0J0c">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/pascoa.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                           Páscoa antecipada para famílias em vulnerabilidade
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 01:57</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="mefBFZE_lcY">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/aulas.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                          Volta às aulas sem aparelho celular nas escolas
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 01:20</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 4 - VT -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="vt" data-video="H2zf_OQrloc">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/brasilia.webp"
+                            alt="VT"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            VT
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Audiovisual
+                        </span>
+
+                        <h3 class="work-title">
+                          Exposição na França celebra os 65 anos de Brasília
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2025</span>
+
+                            <span>⏱ 02:54</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Edição</span>
+
+                                <span>Finalização</span>
+
+                            </div>
+
+                        </div>
+
+                 
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 5 - TV -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="tv" data-video="HLY21DRxBDw">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/thumbeletrica.webp"
+                            alt="Setor elétrico: leilões de reserva de capacidade são discutidos em comissão"
                             loading="lazy"
                         >
 
@@ -974,19 +1518,19 @@
                         </span>
 
                         <h3 class="work-title">
-                            Entrevista Exclusiva
+                            Setor elétrico: leilões de reserva de capacidade são discutidos em comissão
                         </h3>
 
-                        <p class="work-description">
-                            Entrevista em profundidade com autoridade sobre
-                            tema relevante da atualidade.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-info">
 
                             <span>📅 2026</span>
 
-                            <span>⏱ 05:12</span>
+                            <span>⏱ 02:05</span>
 
                         </div>
 
@@ -1006,12 +1550,145 @@
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-video="XyZAbCdEf"
+                     
+
+                    </div>
+
+                </article>
+
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 5 - TV -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="tv" data-video="2II2nm71ngM">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/thumbdebatae.webp"
+                            alt='Comissão debate viabilidade de implementação do "Open Asset"'
+                            loading="lazy"
                         >
-                            Assistir
-                        </button>
+
+                        <span class="work-badge">
+                            TV
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            TV Câmara
+                        </span>
+
+                        <h3 class="work-title">
+                            Comissão debate viabilidade de implementação do "Open Asset"
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2026</span>
+
+                            <span>⏱ 03:27</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Entrevista</span>
+
+                                <span>Edição</span>
+
+                            </div>
+
+                        </div>
+
+                     
+
+                    </div>
+
+                </article>
+
+
+
+
+
+
+                 <!-- ================================================= -->
+                <!-- CARD 5 - TV -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="tv" data-video="Oc2_utq1Eoo">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/idosos.webp"
+                            alt='Projetos combatem o câncer e a desnutrição de idosos'
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            TV
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            TV Câmara
+                        </span>
+
+                        <h3 class="work-title">
+                            Projetos combatem o câncer e a desnutrição de idosos
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2026</span>
+
+                            <span>⏱ 01:48</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Roteiro</span>
+
+                                <span>Entrevista</span>
+
+                                <span>Edição</span>
+
+                            </div>
+
+                        </div>
+
+                     
 
                     </div>
 
@@ -1022,16 +1699,16 @@
 
 
                 <!-- ================================================= -->
-                <!-- CARD 6 - Rádio (extra) -->
+                <!-- CARD 2 - Rádio -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="radio">
+                <article class="work-card" data-category="radio" data-audio="audios/FRAUDE.mp3">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/radio-02.jpg"
-                            alt="Segundo programa de rádio"
+                            src="img/thumbs/thumbradio.webp"
+                            alt="Programa de Rádio"
                             loading="lazy"
                         >
 
@@ -1048,19 +1725,19 @@
                         </span>
 
                         <h3 class="work-title">
-                            Série de Reportagens
+                           Proposta que cancela diploma e matrícula de quem fraudar cotas
                         </h3>
 
-                        <p class="work-description">
-                            Série com 5 episódios sobre políticas públicas
-                            e impacto social.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-info">
 
                             <span>📅 2025</span>
 
-                            <span>🎧 Série</span>
+                            <span>🎧 Áudio</span>
 
                         </div>
 
@@ -1070,22 +1747,84 @@
 
                             <div class="role-tags">
 
-                                <span>Pauta</span>
-
                                 <span>Texto</span>
 
-                                <span>Locação</span>
+                                <span>Locução</span>
+
+                                <span>Edição</span>
 
                             </div>
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-audio="audio/serie.mp3"
+                        
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 2 - Rádio -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="radio" data-audio="audios/ROYALTIES.mp3">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/thumbradio.webp"
+                            alt="Programa de Rádio"
+                            loading="lazy"
                         >
-                            Ouvir
-                        </button>
+
+                        <span class="work-badge">
+                            Rádio
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Rádio Câmara
+                        </span>
+
+                        <h3 class="work-title">
+                            Comissão aprova uso de royalties do petróleo para financiar tarifa zero no transporte
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2026</span>
+
+                            <span>🎧 Áudio</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Texto</span>
+
+                                <span>Locução</span>
+
+                                <span>Edição</span>
+
+                            </div>
+
+                        </div>
+
+                        
 
                     </div>
 
@@ -1096,16 +1835,85 @@
 
 
                 <!-- ================================================= -->
-                <!-- CARD 7 - Produção (extra) -->
+                <!-- CARD 2 - Rádio -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="producao">
+                <article class="work-card" data-category="radio" data-audio="audios/TARIFA.mp3">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/producao-02.jpg"
-                            alt="Produção de evento"
+                            src="img/thumbs/thumbradio.webp"
+                            alt="Programa de Rádio"
+                            loading="lazy"
+                        >
+
+                        <span class="work-badge">
+                            Rádio
+                        </span>
+
+                    </div>
+
+                    <div class="work-content">
+
+                        <span class="work-vehicle">
+                            Rádio Câmara
+                        </span>
+
+                        <h3 class="work-title">
+                            Câmara aprova proibição de candidatura ao conselheiro tutelar de pessoas condenadas por crimes graves
+                        </h3>
+
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
+                        </p>
+
+                        <div class="work-info">
+
+                            <span>📅 2026</span>
+
+                            <span>🎧 Áudio</span>
+
+                        </div>
+
+                        <div class="work-role">
+
+                            <strong>Minha atuação</strong>
+
+                            <div class="role-tags">
+
+                                <span>Texto</span>
+
+                                <span>Locução</span>
+
+                                <span>Edição</span>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </div>
+
+                </article>
+
+
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 7 - Produção -->
+                <!-- ================================================= -->
+
+                <article class="work-card" data-category="producao" data-video="KxeqFcSZ-yQ">
+
+                    <div class="work-image">
+
+                        <img
+                            src="img/thumbs/thumbhiphop.webp"
+                            alt="Ceilândia celebra 54 anos de música e cultura."
                             loading="lazy"
                         >
 
@@ -1122,12 +1930,12 @@
                         </span>
 
                         <h3 class="work-title">
-                            Debate Eleitoral
+                            Ceilândia celebra 54 anos de música e cultura.
                         </h3>
 
-                        <p class="work-description">
-                            Produção completa de debate com candidatos,
-                            logística, escalação e coordenação de equipe.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-role">
@@ -1146,9 +1954,6 @@
 
                         </div>
 
-                        <button class="work-button">
-                            Ver detalhes
-                        </button>
 
                     </div>
 
@@ -1159,15 +1964,15 @@
 
 
                 <!-- ================================================= -->
-                <!-- CARD 8 - VT (extra) -->
+                <!-- CARD 8 - VT  -->
                 <!-- ================================================= -->
 
-                <article class="work-card" data-category="vt">
+                <article class="work-card" data-category="vt" data-video="a6YMvafDpK4">
 
                     <div class="work-image">
 
                         <img
-                            src="img/reportagens/vt-02.jpg"
+                            src="img/thumbs/thumbmaeabandona.webp"
                             alt="VT institucional"
                             loading="lazy"
                         >
@@ -1185,19 +1990,19 @@
                         </span>
 
                         <h3 class="work-title">
-                            Campanha de Conscientização
+                            Mãe abandona quatro crianças em casa sem comida
                         </h3>
 
-                        <p class="work-description">
-                            VT educativo com motion graphics e entrevistas
-                            para campanha de saúde pública.
+                        <p class="work-description textovermelho">
+                            Pequeno resumo da reportagem destacando o tema,
+                            contexto e principais informações apresentadas.
                         </p>
 
                         <div class="work-info">
 
                             <span>📅 2025</span>
 
-                            <span>⏱ 01:45</span>
+                            <span>⏱ 02:19</span>
 
                         </div>
 
@@ -1217,12 +2022,7 @@
 
                         </div>
 
-                        <button
-                            class="work-button"
-                            data-video="GhIjKlMnOp"
-                        >
-                            Assistir
-                        </button>
+                      
 
                     </div>
 
@@ -1244,9 +2044,9 @@
     <!-- COMPETÊNCIAS -->
     <!-- ===================================================== -->
 
-    <section class="skills section" id="competencias">
+    <section class="skills" id="competencias">
 
-        <div class="container">
+        <div>
 
             <!-- ======================================= -->
             <!-- HEADER -->
@@ -1458,9 +2258,9 @@
     <!-- BASTIDORES -->
     <!-- ===================================================== -->
 
-    <section class="backstage section" id="bastidores">
+    <section class="backstage" id="bastidores">
 
-        <div class="container">
+        <div>
 
             <!-- ======================================= -->
             <!-- HEADER -->
@@ -1495,7 +2295,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-01.jpg"
+                        src="img/bastidores/ds.jpeg"
                         alt="Entrevista durante cobertura jornalística"
                     >
 
@@ -1518,7 +2318,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-02.jpg"
+                        src="img/bastidores/fff.jpeg"
                         alt="Produção de pauta"
                     >
 
@@ -1541,7 +2341,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-03.jpg"
+                        src="img/bastidores/fgdxg.jpeg"
                         alt="Gravação em estúdio"
                     >
 
@@ -1564,7 +2364,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-04.jpg"
+                        src="img/bastidores/gf.jpeg"
                         alt="Cobertura externa"
                     >
 
@@ -1587,7 +2387,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-05.jpg"
+                        src="img/bastidores/hfd.jpeg"
                         alt="Entrevista coletiva"
                     >
 
@@ -1610,7 +2410,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-06.jpg"
+                        src="img/bastidores/Aj.webp"
                         alt="Redação"
                     >
 
@@ -1633,7 +2433,7 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-07.jpg"
+                        src="img/bastidores/I0823.webp"
                         alt="Rádio Câmara"
                     >
 
@@ -1656,7 +2456,237 @@
                 <figure class="backstage-card">
 
                     <img
-                        src="img/bastidores/bastidor-08.jpg"
+                        src="img/bastidores/I0825.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IM1321.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG1500.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_4071.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_4078.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_4685.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_6239.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_6660.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_6661.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/IMG_9179.webp"
+                        alt="Equipe de reportagem"
+                    >
+
+                    <figcaption>
+
+                        <span class="backstage-category">
+                            Equipe
+                        </span>
+
+                        <h3>
+                            Trabalho em equipe
+                        </h3>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- FOTO -->
+
+                <figure class="backstage-card">
+
+                    <img
+                        src="img/bastidores/lkui.jpeg"
                         alt="Equipe de reportagem"
                     >
 
@@ -1707,9 +2737,9 @@
     <!-- FERRAMENTAS -->
     <!-- ===================================================== -->
 
-    <section class="tools section" id="ferramentas">
+    <section class="tools " id="ferramentas">
 
-        <div class="container">
+        <div>
 
             <!-- ======================================= -->
             <!-- HEADER -->
@@ -1728,7 +2758,7 @@
                 <p class="section-description">
                     Ferramentas utilizadas na produção de conteúdo jornalístico,
                     edição audiovisual, organização de pautas, design e criação
-                    de materiais para diferentes plataformas.
+                    de materiais para diferentes plataformas.<span class="textovermelho">Me informe quais ferramentas abaixo eu coloco</span>
                 </p>
 
             </div>
@@ -1904,11 +2934,7 @@
 
     <footer class="footer">
 
-        <div class="container">
-
-            <!-- ======================================= -->
-            <!-- CONTEÚDO -->
-            <!-- ======================================= -->
+        <div>
 
             <div class="footer-content">
 
@@ -1955,11 +2981,11 @@
 
                     <div class="footer-social">
 
-                        <a href="#" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/fabiele-pires-0b0087309" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
 
-                        <a href="#" aria-label="E-mail">
+                        <a href="mailto:fabieleoliveira.p@gmail.com" aria-label="E-mail">
                             <i class="fas fa-envelope"></i>
                         </a>
 
@@ -2007,10 +3033,25 @@
         </div>
     </div>
 
+    <!-- MODAL DE ÁUDIO -->
+    <div class="audio-modal" id="audioModal" aria-hidden="true">
+        <div class="audio-modal-overlay" id="closeAudioOverlay"></div>
+        <div class="audio-modal-content">
+            <button class="audio-modal-close" id="closeAudioBtn" aria-label="Fechar áudio">&times;</button>
+            <div class="audio-wrapper">
+                <audio id="audioPlayer" controls>
+                    <source src="" type="audio/mpeg">
+                    Seu navegador não suporta áudio HTML5.
+                </audio>
+            </div>
+        </div>
+    </div>
 
 
 
-    <script src="js/main.js"></script>
+
+
+    <script src="js/main.js" defer></script>
 
 </body>
 

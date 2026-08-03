@@ -165,7 +165,44 @@ p{
 
     font-weight:600;
 
+    position:relative;
+
+    overflow:hidden;
+
 }
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.6s;
+
+}
+
+.btn:hover::before{
+
+    width:320px;
+
+    height:320px;
+
+}
+
 
 .btn-primary{
 
@@ -214,4 +251,65 @@ p{
 
 
 }
+
+
+/* ===SELECTION========================================================= */
+
+::selection{
+
+    background:var(--color-secondary);
+
+    color:#fff;
+
+}
+
+section{
+    padding: 30px 20px;
+}
+
+
+.section-header {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59, 130, 246, .08);
+
+    color: var(--primary);
+
+    font-size: .6rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.section-description {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+
+
 

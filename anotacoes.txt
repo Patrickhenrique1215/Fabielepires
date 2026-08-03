@@ -1,3 +1,22 @@
+PROXIMOS PASSOS:
+mudar os px para vw em style.css
+passar para a proxima largura de tela
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Como o público é **recrutador**, eu faria um portfólio muito diferente de um site comum. A pessoa que está contratando geralmente dedica poucos minutos a cada candidato. O objetivo do site é responder rapidamente:
 
 * Quem é ela?
