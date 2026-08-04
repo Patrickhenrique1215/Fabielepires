@@ -2,6 +2,8 @@ PROXIMOS PASSOS:
 mudar os px para vw em style.css
 passar para a proxima largura de tela
 
+criar o VER MAIS da seçao Trabalhos
+
 
 
 

@@ -264,7 +264,7 @@ p{
 }
 
 section{
-    padding: 30px 20px;
+    padding: 10vw 6vw;
 }
 
 
@@ -293,7 +293,7 @@ section{
     letter-spacing: .08em;
     text-transform: uppercase;
 
-    margin-bottom: 22px;
+    margin-bottom: 8vw;
 }
 
 .section-title {
@@ -301,7 +301,7 @@ section{
     font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--text);
     line-height: 1.15;
-    margin-bottom: 24px;
+    margin-bottom: 9vw;
 }
 
 .section-description {
