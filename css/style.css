@@ -7,7 +7,7 @@
     inset: 0 0 auto 0;
     width: 100%;
     z-index: 1000;
-    padding: 6vw 6vw ;
+    padding: clamp(0.5rem, 5vw, 1.5rem) clamp(0.5rem, 5vw, 2.5rem);;
     transition:
         background .35s,
         border-color .35s,
@@ -17,7 +17,7 @@
 }
 
 .header.scrolled {
-    padding: 5vw 5vw;
+    padding: clamp(0.5rem, 5vw, 1.5rem) clamp(0.5rem, 5vw, 2.5rem);
     background: rgba(255,255,255,.82);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -51,12 +51,12 @@
 }
 
 .logo-text strong{
-    font-size: clamp(0.5rem, 4.5vw, 10rem);
+    font-size: clamp(0.5rem, 4.5vw, 1.5rem);
     font-weight:600;
 }
 
 .logo-text small{
-     font-size: clamp(0.5rem, 4.5vw, 10rem);
+     font-size: clamp(0.5rem, 4.5vw, 1.5rem);
     opacity:.75;
     letter-spacing:.08em;
     text-transform:uppercase;
@@ -134,7 +134,7 @@
 }
 
 .menu-toggle span{
-    width: 10vw ;
+    width: clamp(1.5rem, 10vw, 2.5rem);
     aspect-ratio: 16 / 2;
 
     border-radius:50px;
@@ -350,7 +350,7 @@
 }
 
 .hero-title{
-    font-size: clamp(1rem, 11vw, 4rem);
+    font-size: clamp(1rem, 11vw, 2.5rem);
     line-height:.95;
     letter-spacing:-2px;
     margin-bottom: 0; 
@@ -358,7 +358,7 @@
 }
 
 .hero-description{
-    font-size: clamp(0.3rem, 4vw, 3rem);
+    font-size: clamp(0.3rem, 4vw, 1.5rem);
     color:var(--color-text-light);
     margin-bottom: 0; 
     
@@ -368,7 +368,7 @@
 
 
 .hero-buttons .btn{
-    font-size: clamp(0.2rem, 3vw, 4rem);
+    font-size: clamp(0.2rem, 3vw, 1rem);
     letter-spacing:.3px;
 }
 
@@ -390,7 +390,7 @@
 }
 
 .hero-social a{
-    font-size: clamp(0.3rem, 3vw, 3rem);
+    font-size: clamp(0.3rem, 3vw, 1rem);
     color:var(--color-text-light);
     font-weight:500;
     transition:.35s;
@@ -821,7 +821,7 @@
 
 .featured-title {
     font-family: var(--font-title, inherit);
-    font-size: ;
+    font-size: clamp(0.5rem, 5vw, 5rem);
     color: var(--text, #0f172a);
     line-height: 1.2;
     margin-bottom: 16px;
@@ -829,7 +829,7 @@
 
 .featured-description {
     color: var(--text-light, #64748b);
-    font-size: .7rem;
+    font-size: clamp(0.3rem, 3.5vw, 3rem);
     line-height: 1.7;
     margin-bottom: 24px;
 }
@@ -854,7 +854,7 @@
 .meta-label {
     display: block;
     color: var(--text-light, #64748b);
-    font-size: .75rem;
+    font-size: clamp(0.3rem, 3.5vw, 3rem);;
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: .05em;
@@ -862,14 +862,14 @@
 
 .meta-item strong {
     color: var(--text, #0f172a);
-    font-size: .75rem;
+    font-size: clamp(0.3rem, 3.5vw, 3rem);;
     font-weight: 600;
 }
 
 /* == ATUAÇÃO ========================================================== */
 
 .featured-role h4 {
-    font-size: .95rem;
+    font-size: clamp(0.9rem, 5vw, 5rem);;
     color: var(--text, #0f172a);
     margin-bottom: 14px;
 }
@@ -887,7 +887,7 @@
     align-items: center;
     gap: 8px;
     color: var(--text, #0f172a);
-    font-size: .9rem;
+    font-size: clamp(0.9rem, 4vw, 6rem);;
     font-weight: 500;
 }
 
@@ -902,7 +902,7 @@
     border-radius: 50%;
     background: rgba(59,130,246,.1);
     color: var(--primary, #3b82f6);
-    font-size: .75rem;
+    font-size: clamp(0.3rem, 3.5vw, 3rem);;
     font-weight: bold;
 }
 
@@ -1119,7 +1119,7 @@
 
     margin-bottom: 4px;
 
-    font-size: clamp(2.8rem,4vw,3.5rem);
+    font-size: clamp(1.5rem, 12vw, 8rem);
 
     font-weight: 700;
 
@@ -1139,7 +1139,7 @@
 
 .stat-title {
 
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 5vw, 3rem);;
 
     font-weight: 600;
 
@@ -1157,7 +1157,7 @@
 
     line-height: 1.8;
 
-    font-size: .6rem;
+    font-size: clamp(0.3rem, 3vw, 3rem);;
 
 }
 
@@ -1223,7 +1223,7 @@
     border-radius: 999px;
     background: #fff;
     color: var(--text);
-    font-size: .6rem;
+    font-size: clamp(0.3rem, 2.8vw, 4rem);;
     font-weight: 500;
     cursor: pointer;
     transition: .3s;
@@ -1315,7 +1315,7 @@
 
     color: var(--primary);
 
-    font-size: .5rem;
+    font-size: clamp(0.3rem, 2.5vw, 3rem);;
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -1334,7 +1334,7 @@
 
     color: var(--primary);
 
-    font-size: .55rem;
+    font-size: clamp(0.3rem, 2.5vw, 3rem);;
 
     font-weight: 600;
 
@@ -1344,7 +1344,7 @@
 }
 
 .work-title {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 5vw, 4rem);;
     font-family: var(--font-title);
     color: var(--text);
     margin-bottom: 8px;
@@ -1352,7 +1352,7 @@
 }
 
 .work-description {
-    font-size: 0.65rem;
+    font-size: clamp(0.3rem, 3.3vw, 3rem);;
     color: var(--text-light);
     line-height: 1.8;
 
@@ -1536,7 +1536,7 @@
 /* ============TEXTO=================================================== */
 
 .skill-title{
-    font-size:1rem;
+    font-size: clamp(0.5rem, 5vw, 4rem);;
     font-weight:700;
     color:var(--title-color);
 
@@ -1545,8 +1545,7 @@
 
 .skill-description{
     color:var(--text-color);
-
-    font-size:0.7rem;
+    font-size: clamp(0.3rem, 3.5vw, 3rem);;
     line-height:1.4;
 }
 
@@ -1964,7 +1963,7 @@
 
 .tool-title {
 
-    font-size: 0.9rem;
+    font-size: clamp(0.5rem, 5vw, 4rem);
     font-weight: 700;
 
     color: var(--title-color);
@@ -1978,7 +1977,7 @@
 
     color: var(--text-color);
 
-    font-size: .7rem;
+    font-size: clamp(0.4rem, 3.5vw, 3.5rem);
     line-height: 1.75;
 
 }

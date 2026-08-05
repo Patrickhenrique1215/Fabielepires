@@ -1,35 +1,54 @@
 
 /* =======================================================
-   TABLET
+   GLOBAL.CSS
 ======================================================= */
+
+@media (min-width: 768px) {
+    
+}
+
+
+@media (min-width: 992px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================================
+   STYLE.CSS
+======================================================= */
+
 @media (min-width: 768px){
-    .header {
 
-        padding: 28px 40px;
 
-    }
-
-    .header.scrolled {
-        padding: 28px 40px;
-    }
-
-    .menu-toggle{
-        width:56px;
-        height:56px;
+    .logo-text{
+        width: 25vw;
     }
 
     .menu-toggle span{
-        width:34px;
-        height:4px;
-
-        background:var(--color-text-light);
-    }
-
-    .hero-container {
-        
-        padding-left: 40px;
-        padding-right: 40px;
-    
+        background: var(--color-text-light);
     }
 
     .hero-tag{
@@ -59,91 +78,69 @@
         font-size: 1.4rem;
     }
 
-
     .image-frame{
-
         width:320px;
-
         height:600px;
-
         border-radius:34px;
-
-
         padding:18px;
-
-
     }
 
     .image-frame:hover{
-
         transform:translateY(-10px);
-
     }
 
     .hero-image{
-
         border-radius:24px;
-
     }
 
     .image-glow{
-
         width:260px;
-
         height:260px;
-
         opacity:.22;
-
     }
 
 
     .corner{
-
         width:38px;
-
         height:38px;
-
     }
 
     .corner-top-left{
-
         top:10px;
         left:10px;
-
         border-top:2px solid rgba(255,255,255,.8);
         border-left:2px solid rgba(255,255,255,.8);
-
     }
 
     .corner-top-right{
-
         top:10px;
         right:10px;
-
         border-top:2px solid rgba(255,255,255,.8);
         border-right:2px solid rgba(255,255,255,.8);
-
     }
 
     .corner-bottom-left{
-
         bottom:10px;
         left:10px;
-
         border-bottom:2px solid rgba(255,255,255,.8);
         border-left:2px solid rgba(255,255,255,.8);
-
     }
 
     .corner-bottom-right{
-
         bottom:10px;
         right:10px;
-
         border-bottom:2px solid rgba(255,255,255,.8);
         border-right:2px solid rgba(255,255,255,.8);
-
     }
+
+
+
+
+
+
+
+
+
 
     .featured-content {
         display: grid;
@@ -164,7 +161,6 @@
     }
 
     .stats-grid {
-     
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -173,7 +169,6 @@
     }    
 
     .stats-grid {
-     
         grid-template-columns: repeat(4, 1fr);
     }
 

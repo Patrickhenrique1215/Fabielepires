@@ -302,14 +302,14 @@ section{
 
 .section-title {
     font-family: var(--font-title);
-    font-size: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(1rem, 7vw, 5rem);
     color: var(--text);
     line-height: 1.15;
     margin-bottom: 9vw;
 }
 
 .section-description {
-    font-size: clamp(0.4rem, 3vw, 2rem);
+    font-size: clamp(0.5rem, 4vw, 3rem);
     color: var(--text-light);
     line-height: 1.8;
 }
