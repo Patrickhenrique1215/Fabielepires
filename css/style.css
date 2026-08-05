@@ -51,12 +51,12 @@
 }
 
 .logo-text strong{
-    font-size: 4.5vw;
+    font-size: clamp(0.5rem, 4.5vw, 10rem);
     font-weight:600;
 }
 
 .logo-text small{
-     font-size: 4.5vw;
+     font-size: clamp(0.5rem, 4.5vw, 10rem);
     opacity:.75;
     letter-spacing:.08em;
     text-transform:uppercase;
@@ -123,23 +123,18 @@
 /* =====MENU TOGGLE====================================================== */
 
 .menu-toggle{
-    width:10vw;
-    aspect-ratio: 1 / 1;
-
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
-
     gap:5px;
-
     background:none;
-    border:none;
+    border: none;
     cursor:pointer;
 }
 
 .menu-toggle span{
-    width:24px;
+    width: 10vw ;
     aspect-ratio: 16 / 2;
 
     border-radius:50px;
@@ -257,7 +252,7 @@
 
 .hero {
     min-height: 100vh;
-    height: 100vh; /* FORÇA a altura exata */
+    height: 100vh; 
     overflow: hidden;
     background: linear-gradient(
         180deg,
@@ -266,12 +261,11 @@
         #ffffff 100%
     );
     position: relative;
-    display: flex; /* Torna o hero um flex container */
+    display: flex; 
     flex-direction: column;
 }
 
 /* ============BACKGROUND=========================================== */
-/* (mantém igual) */
 .hero-bg{
     position:absolute;
     inset:0;
@@ -324,16 +318,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 10px;
     z-index: 2;
-    
-    flex: 1; /* Ocupa todo o espaço disponível no hero */
-    max-height: 90vh; /* Limite máximo */
-    min-height: 0; /* Permite encolher */
-    
-    padding-top: 12vh; /* Espaço em cima */
-
-    
+    flex: 1; 
+    min-height: 0; 
+    padding-top: 12vh; 
 }
 
 /* ==TEXTO======================================================== */
@@ -341,8 +329,9 @@
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Centraliza verticalmente */
-    height: 100%; /* Ocupa toda altura do container */
+    justify-content: space-between;
+    height: 100%; 
+    
 }
 
 .hero-tag{
@@ -354,14 +343,14 @@
     background:rgba(255,255,255,.7);
     border:1px solid rgba(15,23,42,.08);
     backdrop-filter:blur(20px);
-    font-size: 0.4rem;
+    font-size: clamp(0.1rem, 2vw, 3rem);
     font-weight:600;
     color:var(--color-secondary);
     margin-bottom: 0; 
 }
 
 .hero-title{
-    font-size: 2rem;
+    font-size: clamp(1rem, 11vw, 4rem);
     line-height:.95;
     letter-spacing:-2px;
     margin-bottom: 0; 
@@ -369,16 +358,17 @@
 }
 
 .hero-description{
-    font-size: 0.7rem;
+    font-size: clamp(0.3rem, 4vw, 3rem);
     color:var(--color-text-light);
     margin-bottom: 0; 
+    
 }
 
 /* =======BOTÕES========================================================== */
 
 
 .hero-buttons .btn{
-    font-size:0.5rem;
+    font-size: clamp(0.2rem, 3vw, 4rem);
     letter-spacing:.3px;
 }
 
@@ -400,7 +390,7 @@
 }
 
 .hero-social a{
-    font-size: 0.7rem;
+    font-size: clamp(0.3rem, 3vw, 3rem);
     color:var(--color-text-light);
     font-weight:500;
     transition:.35s;
@@ -422,8 +412,8 @@
 
 .image-frame{
     position:relative;
-    width:140px;
-    height:140px;
+    width: 50vw;
+    height: 50vw;
     border-radius:50%;
     background:#fff;
     padding:10px;
@@ -823,7 +813,7 @@
     border-radius: 999px;
     background: rgba(59,130,246,.08);
     color: var(--primary, #3b82f6);
-    font-size: .7rem;
+    font-size: clamp(0.3rem, 3vw, 3rem);
     font-weight: 600;
     letter-spacing: .05em;
 
@@ -831,7 +821,7 @@
 
 .featured-title {
     font-family: var(--font-title, inherit);
-    font-size: 1rem;
+    font-size: ;
     color: var(--text, #0f172a);
     line-height: 1.2;
     margin-bottom: 16px;
