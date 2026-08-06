@@ -493,7 +493,7 @@
     position:absolute;
     left:0;
     right: 0;
-    bottom:40px;
+    bottom:1px;
     margin: 0 auto;
     transform:translateX(-50%);
     flex-direction:column;
@@ -505,39 +505,24 @@
 
 
 .scroll-indicator span{
-
-    font-size:.85rem;
-
+    font-size: clamp(0.5rem, 0.9vw, 2rem);
     font-weight:500;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
     color:var(--color-text-light);
 
 }
 
 .mouse{
-
-    width:32px;
-
-    height:54px;
-
+    width:24px;
+    height:44px;
     border:2px solid rgba(15,23,42,.2);
-
     border-radius:999px;
-
     display:flex;
-
     justify-content:center;
-
     padding-top:8px;
-
     background:rgba(255,255,255,.75);
-
     backdrop-filter:blur(10px);
-
 }
 
 .wheel{
@@ -1036,16 +1021,11 @@
 
 .stat-card {
     position: relative;
-
     background: rgba(255,255,255,.75);
-
     border: 1px solid rgba(15,23,42,.06);
-
     border-radius: 28px;
-
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-
     transition:
         transform .35s ease,
         box-shadow .35s ease,
@@ -1056,29 +1036,20 @@
 
 .stat-card:hover {
     transform: translateY(-10px);
-
     border-color: rgba(59,130,246,.18);
-
     box-shadow:
         0 18px 45px rgba(15,23,42,.08),
         0 8px 20px rgba(59,130,246,.08);
 }
 
-/* Linha superior */
-
 .stat-card::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 28px;
-
     width: 70px;
     height: 4px;
-
     border-radius: 999px;
-
     background: linear-gradient(
         90deg,
         var(--primary),
@@ -1089,20 +1060,14 @@
 /* ======ÍCONE======================================= */
 
 .stat-icon {
-
     width: 30px;
     height: 30px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-bottom: 26px;
-
-    font-size: 2rem;
-
+    font-size: clamp(1rem, 10vw, 3rem);
     border-radius: 20px;
-
     background: linear-gradient(
         135deg,
         rgba(59,130,246,.12),
@@ -1114,21 +1079,13 @@
 /* ====NÚMERO============================================ */
 
 .stat-number {
-
     display: block;
-
     margin-bottom: 4px;
-
     font-size: clamp(1.5rem, 12vw, 8rem);
-
     font-weight: 700;
-
     color: var(--primary);
-
     line-height: 1;
-
     font-family: var(--font-title);
-
 }
 
 .stat-number::before {
@@ -1138,27 +1095,18 @@
 /* ====TÍTULO=========================================== */
 
 .stat-title {
-
     font-size: clamp(0.7rem, 5vw, 3rem);;
-
     font-weight: 600;
-
     color: var(--text);
-
     margin-bottom: 4px;
-
 }
 
 /* ==TEXTO============================================ */
 
 .stat-text {
-
     color: var(--text-light);
-
     line-height: 1.8;
-
     font-size: clamp(0.3rem, 3vw, 3rem);;
-
 }
 
 
@@ -1501,23 +1449,17 @@
 .skill-icon{
     width:48px;
     height:48px;
-
     margin:0 auto 26px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     font-size:1.5rem;
-
     border-radius:10px;
-
     background:linear-gradient(
         135deg,
         rgba(0,119,255,.10),
         rgba(0,119,255,.18)
     );
-
     transition:
         transform .35s ease,
         background .35s ease;
@@ -1525,7 +1467,6 @@
 
 .skill-card:hover .skill-icon{
     transform:scale(1.08) rotate(-6deg);
-
     background:linear-gradient(
         135deg,
         rgba(0,119,255,.18),
