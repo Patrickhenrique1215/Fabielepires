@@ -316,6 +316,7 @@ if (statsSection) {
    TRABALHOS
 ========================================================== */
 
+/* =============== FILTROS =================*/
 const filterButtons = document.querySelectorAll(".filter-btn");
 const workCards = document.querySelectorAll(".work-card");
 
@@ -353,7 +354,7 @@ filterButtons.forEach((button) => {
 
 });
 
-/* =================  CARD HOVER (EFEITO 3D LEVE)========================================= */
+/* ==============  CARD HOVER (EFEITO 3D LEVE)=================== */
 
 workCards.forEach((card) => {
 
@@ -382,6 +383,153 @@ workCards.forEach((card) => {
     });
 
 });
+/* ===================== BOTÃO VER MAIS =================== */
+
+const cards = [...document.querySelectorAll(".work-card")];
+const btn = document.getElementById("btnVerMais");
+
+let visible = 0;
+
+
+/* ===== Quantos cards mostrar ===== */
+
+function cardsPerClick(){
+
+    if(window.innerWidth >= 992){
+
+        return 6;
+
+    }
+
+    if(window.innerWidth >= 768){
+
+        return 8;
+
+    }
+
+    return 6;
+
+}
+
+
+/* ===== Esconde todos os cards ===== */
+
+function hideAllCards(){
+
+    cards.forEach(card=>{
+
+        card.classList.add("hidden");
+        card.classList.remove("pre-show","show");
+
+    });
+
+}
+
+
+/* ===== Revela um card ===== */
+
+function revealCard(card){
+
+    card.classList.remove("hidden");
+    card.classList.add("pre-show");
+
+    requestAnimationFrame(()=>{
+
+        requestAnimationFrame(()=>{
+
+            card.classList.remove("pre-show");
+            card.classList.add("show");
+
+        });
+
+    });
+
+}
+
+
+/* ===== Revela uma lista de cards (efeito cascata) ===== */
+
+function revealCards(list){
+
+    list.forEach((card,index)=>{
+
+        setTimeout(()=>{
+
+            revealCard(card);
+
+        },index * 90);
+
+    });
+
+}
+
+
+/* ===== Carregamento inicial ===== */
+
+function initialLoad(){
+
+    visible = cardsPerClick();
+
+    hideAllCards();
+
+    revealCards(cards.slice(0,visible));
+
+    btn.style.display =
+        visible >= cards.length
+            ? "none"
+            : "inline-flex";
+
+}
+
+
+/* ===== Clique em Ver Mais ===== */
+
+function showMore(){
+
+    const amount = cardsPerClick();
+
+    const next = cards.slice(visible,visible + amount);
+
+    revealCards(next);
+
+    visible += amount;
+
+    if(visible >= cards.length){
+
+        btn.style.display = "none";
+
+    }
+
+}
+
+
+/* ===== Resize ===== */
+
+window.addEventListener("resize",()=>{
+
+    const oldVisible = visible;
+
+    visible = Math.max(oldVisible,cardsPerClick());
+
+    hideAllCards();
+
+    revealCards(cards.slice(0,visible));
+
+    btn.style.display =
+        visible >= cards.length
+            ? "none"
+            : "inline-flex";
+
+});
+
+
+/* ===== Eventos ===== */
+
+btn.addEventListener("click",showMore);
+
+initialLoad();
+
+
 
 
 
@@ -825,34 +973,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-
-/* ==========================================================
-   EVENTOS
-========================================================== */
-
-if (openVideoButton) {
-
-    openVideoButton.addEventListener("click", openFeaturedVideo);
-
-}
-
-if (watchFeaturedButton) {
-
-    watchFeaturedButton.addEventListener("click", openFeaturedVideo);
-
-}
-
-if (closeVideoButton) {
-
-    closeVideoButton.addEventListener("click", closeFeaturedVideo);
-
-}
-
-if (modalOverlay) {
-
-    modalOverlay.addEventListener("click", closeFeaturedVideo);
-
-}

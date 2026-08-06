@@ -446,72 +446,72 @@
         font-size: clamp(0.3rem, 1.1vw, 4rem);;
     }
 
-.works-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2vw;
-}
+    .works-grid {
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        gap:2vw;
+    }
 
-.work-card {
-    border-radius: 28px;
-}
+    .work-card {
+        border-radius: 28px;
+    }
 
-.work-image {
-    aspect-ratio: 1 / 1;
-}
+    .work-image {
+        aspect-ratio: 1 / 1;
+    }
 
-.work-badge {
-    font-size: clamp(0.3rem, 1vw, 3rem);;
-}
+    .work-badge {
+        font-size: clamp(0.3rem, 1vw, 3rem);;
+    }
 
-.work-vehicle {
-    display: flex;
-    margin-bottom: 14px;
-    font-size: clamp(0.3rem, 1vw, 3rem);;
-}
+    .work-vehicle {
+        display: flex;
+        margin-bottom: 14px;
+        font-size: clamp(0.3rem, 1vw, 3rem);;
+    }
 
-.work-title {
-    font-size: clamp(0.5rem, 1vw, 4rem);;
-    margin-bottom: 8px;
-}
+    .work-title {
+        font-size: clamp(0.5rem, 1vw, 4rem);;
+        margin-bottom: 8px;
+    }
 
-.work-description {
-    font-size: clamp(0.3rem, 1vw, 3rem);;
+    .work-description {
+        font-size: clamp(0.3rem, 1vw, 3rem);;
 
-}
+    }
 
-.work-info {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-}
+    .work-info {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+    }
 
-.work-info span {
-    font-size: clamp(0.2rem, 1vw, 2rem);
-}
+    .work-info span {
+        font-size: clamp(0.2rem, 1vw, 2rem);
+    }
 
-.work-role {
-    margin-bottom: 30px;
-    display: flex;
-}
+    .work-role {
+        margin-bottom: 30px;
+        display: flex;
+    }
 
-.work-role strong {
-    display: block;
-    margin-bottom: 16px;
-    font-size: clamp(0.2rem, 1vw, 3rem);
-}
+    .work-role strong {
+        display: block;
+        margin-bottom: 16px;
+        font-size: clamp(0.2rem, 1vw, 3rem);
+    }
 
-.role-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+    .role-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
-.role-tags span {
-    padding: 8px 14px;
-    font-size: clamp(0.3rem, 1vw, 3rem);
-}
+    .role-tags span {
+        padding: 8px 14px;
+        font-size: clamp(0.3rem, 1vw, 3rem);
+    }
 
 
 

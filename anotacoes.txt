@@ -1,7 +1,7 @@
 PROXIMOS PASSOS:
 
 passar para a proxima largura de tela:  ATUALMENTE EM >992 TRABALHOS
-criar o VER MAIS da seçao Trabalhos e adicionar os trabalhos faltantes..
+CONSERTAR O PROBLEMA DE FILTROS DOS TRABALHOS
 
 
 
