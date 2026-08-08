@@ -397,7 +397,7 @@ function cardsPerClick(){
 
     if(window.innerWidth >= 992){
 
-        return 6;
+        return 5;
 
     }
 

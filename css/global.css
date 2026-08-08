@@ -283,20 +283,14 @@ section{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 8px 18px;
-
     border-radius: 999px;
-
     background: rgba(59, 130, 246, .08);
-
     color: var(--primary);
-
     font-size: clamp(0.3rem, 2.8vw, 3rem);
     font-weight: 600;
     letter-spacing: .08em;
     text-transform: uppercase;
-
     margin-bottom: 8vw;
 }
 

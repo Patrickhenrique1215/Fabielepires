@@ -320,7 +320,8 @@
     align-items: center;
     z-index: 2;
     flex: 1; 
-    min-height: 0; 
+    min-height: 100vh; 
+    max-height: 100vh;
     padding-top: 12vh; 
 }
 
@@ -331,6 +332,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%; 
+    min-height: 0;
     
 }
 
@@ -361,6 +363,7 @@
     font-size: clamp(0.3rem, 4vw, 1.5rem);
     color:var(--color-text-light);
     margin-bottom: 0; 
+    
     
 }
 
@@ -407,7 +410,8 @@
     justify-content:center;
     align-items:center;
     position:relative;
-    height: 100%; /* Ocupa toda altura do container */
+    height: 100%; 
+    min-height: 0;
 }
 
 .image-frame{
@@ -1229,11 +1233,8 @@
 }
 
 .work-card.pre-show{
-
     display:block;
-
     opacity:0;
-
     transform:
         translateY(40px)
         scale(.95);
@@ -1241,9 +1242,7 @@
 }
 
 .work-card.show{
-
     opacity:1;
-
     transform:
         translateY(0)
         scale(1);
@@ -1265,7 +1264,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-
     transition:
         transform .6s ease,
         filter .6s ease;
@@ -1281,15 +1279,10 @@
     position: absolute;
     top: 20px;
     left: 20px;
-
     padding: 8px 16px;
-
     border-radius: 999px;
-
     background: rgba(255,255,255,.92);
-
     color: var(--primary);
-
     font-size: clamp(0.3rem, 2.5vw, 3rem);;
     font-weight: 700;
     letter-spacing: .08em;
@@ -1999,21 +1992,16 @@
 /* =========TEXTO =========================================== */
 
 .tool-title {
-
     font-size: clamp(0.5rem, 5vw, 4rem);
     font-weight: 700;
-
     color: var(--title-color);
-
     margin-bottom: 16px;
     margin-top: 10px;
 
 }
 
 .tool-description {
-
     color: var(--text-color);
-
     font-size: clamp(0.4rem, 3.5vw, 3.5rem);
     line-height: 1.75;
 
@@ -2043,37 +2031,29 @@
 
 .footer {
     position: relative;
-
     margin-top: 120px;
     padding: 80px 20px 0 20px;
-
     background: linear-gradient(
         180deg,
         #0f172a 0%,
         #111827 100%
     );
-
     color: rgba(255,255,255,.85);
-
     overflow: hidden;
 }
 
 .footer::before{
     content:"";
-
     position:absolute;
     top:0;
     left:50%;
-
     width:700px;
     height:700px;
-
     background:radial-gradient(
         circle,
         rgba(0,119,255,.12),
         transparent 70%
     );
-
     transform:translateX(-50%);
     pointer-events:none;
 }
@@ -2081,10 +2061,8 @@
 /* ==========GRID ============================================ */
 
 .footer-content{
-
     position:relative;
     z-index:2;
-
     padding-bottom:60px;
 
 }
@@ -2092,103 +2070,69 @@
 /* ==============BRAND ========================================== */
 
 .footer-logo{
-
     color:#fff;
-
     font-size:1.2rem;
     margin-bottom:20px;
-
 }
 
 .footer-description{
-
     max-width:420px;
-
     line-height:1.9;
-
     color:rgba(255,255,255,.72);
-
     font-size: 0.8rem;
     margin-bottom: 60px;
-
 }
 
 /* ===============COLUNAS ======================================= */
 
 .footer-column h3{
-
     color:#fff;
-
     margin-bottom:22px;
-
     font-size:0.8rem;
-
 }
 
 .footer-column ul{
-
     list-style:none;
-
 }
 
 .footer-column li{
-
     margin-bottom:14px;
-
 }
 
 .footer-column a{
-
     color:rgba(255,255,255,.72);
-
     text-decoration:none;
-
     transition:.3s;
-
 }
 
 .footer-column a:hover{
-
     color:#fff;
-
     padding-left:6px;
-
 }
 
 /* ========CONTATO =========================================== */
 
 .footer-contact li{
-
     color:rgba(255,255,255,.72);
-
 }
 
 /* ===============================REDES ========================================== */
 
 .footer-social{
-
     display:flex;
     gap:14px;
-
     margin-top:28px;
-
 }
 
 .footer-social a{
-
     width:46px;
     height:46px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:#fff;
-
     transition:
         transform .35s,
         background .35s;
@@ -2196,54 +2140,38 @@
 }
 
 .footer-social a:hover{
-
     transform:translateY(-6px);
-
     background:var(--primary-color);
-
 }
 
 /* ========== FOOTER BOTTOM ====================================== */
 
 .footer-bottom{
-
     position:relative;
     z-index:2;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     gap:20px;
-
     padding:28px 0;
-
     border-top:1px solid rgba(255,255,255,.08);
-
 }
 
 .footer-bottom p{
-
     color:rgba(255,255,255,.55);
-
     font-size:.6rem;
-
 }
 
 /* =========================== ANIMAÇÃO =========================================== */
 
 .footer-content>*{
-
     opacity:0;
     transform:translateY(40px);
-
 }
 
 .footer-content>*.visible{
-
     opacity:1;
     transform:translateY(0);
-
     transition:
         opacity .8s ease,
         transform .8s ease;
