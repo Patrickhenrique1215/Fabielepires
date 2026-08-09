@@ -320,8 +320,8 @@
     align-items: center;
     z-index: 2;
     flex: 1; 
-    min-height: 100vh; 
-    max-height: 100vh;
+    min-height: 0; 
+    max-height: 100%;
     padding-top: 12vh; 
 }
 
@@ -333,6 +333,7 @@
     justify-content: space-between;
     height: 100%; 
     min-height: 0;
+    gap: 0.5rem;
     
 }
 
@@ -408,7 +409,7 @@
 .hero-image-area{
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items: flex-start;
     position:relative;
     height: 100%; 
     min-height: 0;
@@ -1193,13 +1194,42 @@
     color: #0e0e0e;
     border-color: var(--primary);
 }
-
 /* ======GRID======================================== */
 
 .works-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+}
+
+/* ===== ESTADOS DOS CARDS (filtro + paginação) ===== */
+
+.work-card {
+    transition: opacity .4s ease, transform .4s ease;
+}
+
+/* Escondido pelo filtro — remove do fluxo */
+.work-card.hide {
+    display: none !important;
+}
+
+/* Aguardando ser revelado pela paginação — ainda no fluxo, mas invisível */
+.work-card.hidden {
+    display: none;
+}
+
+/* Estado inicial da animação de entrada (antes do requestAnimationFrame) */
+.work-card.pre-show {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Estado final — card visível e animado */
+.work-card.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==== CARD======================================= */

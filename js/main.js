@@ -311,225 +311,148 @@ if (statsSection) {
 }
 
 
-
 /* ==========================================================
    TRABALHOS
 ========================================================== */
 
-/* =============== FILTROS =================*/
 const filterButtons = document.querySelectorAll(".filter-btn");
-const workCards = document.querySelectorAll(".work-card");
+const cards = [...document.querySelectorAll(".work-card")];
+const btn = document.getElementById("btnVerMais");
 
-filterButtons.forEach((button) => {
+let currentFilter = "all";
+let filteredCards = cards;
+let visible = 0;
 
-    button.addEventListener("click", () => {
+/* ===== Quantos cards mostrar por vez ===== */
+function cardsPerClick() {
+    if (window.innerWidth >= 992) return 5;
+    if (window.innerWidth >= 768) return 8;
+    return 6;
+}
 
-        /* Remove o ativo */
+/* ===== Esconde um card completamente (fora do filtro) ===== */
+function hideCardCompletely(card) {
+    card.classList.add("hide");
+    card.classList.remove("hidden", "pre-show", "show");
+}
 
-        filterButtons.forEach((btn) => {
-            btn.classList.remove("active");
+/* ===== Reseta um card para o estado "aguardando revelar" ===== */
+function resetCardForPagination(card) {
+    card.classList.remove("hide");
+    card.classList.add("hidden");
+    card.classList.remove("pre-show", "show");
+}
+
+/* ===== Revela um card ===== */
+function revealCard(card) {
+    card.classList.remove("hidden");
+    card.classList.add("pre-show");
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            card.classList.remove("pre-show");
+            card.classList.add("show");
         });
+    });
+}
 
-        button.classList.add("active");
+/* ===== Revela uma lista de cards (cascata) ===== */
+function revealCards(list) {
+    list.forEach((card, index) => {
+        setTimeout(() => {
+            revealCard(card);
+        }, index * 90);
+    });
+}
 
-        const filter = button.dataset.filter;
+/* ===== Aplica filtro + reinicia paginação ===== */
+function applyFilter(filter) {
+    currentFilter = filter;
 
-        workCards.forEach((card) => {
-
-            const category = card.dataset.category;
-
-            if (filter === "all" || filter === category) {
-
-                card.classList.remove("hide");
-
-            } else {
-
-                card.classList.add("hide");
-
-            }
-
-        });
-
+    filteredCards = cards.filter((card) => {
+        return filter === "all" || card.dataset.category === filter;
     });
 
+    // Esconde por completo quem não pertence ao filtro
+    cards.forEach((card) => {
+        if (!filteredCards.includes(card)) {
+            hideCardCompletely(card);
+        }
+    });
+
+    // Reseta os cards do filtro atual para o estado "aguardando"
+    filteredCards.forEach(resetCardForPagination);
+
+    // Reinicia a paginação sobre o novo conjunto filtrado
+    visible = cardsPerClick();
+    revealCards(filteredCards.slice(0, visible));
+
+    btn.style.display =
+        visible >= filteredCards.length ? "none" : "inline-flex";
+}
+
+/* ===== Clique nos filtros ===== */
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        applyFilter(button.dataset.filter);
+    });
 });
 
+/* ===== Clique em Ver Mais ===== */
+function showMore() {
+    const amount = cardsPerClick();
+    const next = filteredCards.slice(visible, visible + amount);
+
+    revealCards(next);
+    visible += amount;
+
+    if (visible >= filteredCards.length) {
+        btn.style.display = "none";
+    }
+}
+
+btn.addEventListener("click", showMore);
+
+/* ===== Resize ===== */
+window.addEventListener("resize", () => {
+    const oldVisible = visible;
+    visible = Math.max(oldVisible, cardsPerClick());
+
+    filteredCards.forEach(resetCardForPagination);
+    revealCards(filteredCards.slice(0, visible));
+
+    btn.style.display =
+        visible >= filteredCards.length ? "none" : "inline-flex";
+});
+
+/* ===== Carregamento inicial ===== */
+applyFilter("all");
+
 /* ==============  CARD HOVER (EFEITO 3D LEVE)=================== */
-
-workCards.forEach((card) => {
-
+cards.forEach((card) => {
     card.addEventListener("mousemove", (event) => {
-
         const rect = card.getBoundingClientRect();
-
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
 
         const rotateY = ((x / rect.width) - 0.5) * 6;
         const rotateX = ((y / rect.height) - 0.5) * -6;
 
-        card.style.transform =
-            `perspective(1000px)
-             rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             translateY(-8px)`;
-
+        card.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            translateY(-8px)
+        `;
     });
 
     card.addEventListener("mouseleave", () => {
-
         card.style.transform = "";
-
     });
-
 });
-/* ===================== BOTÃO VER MAIS =================== */
-
-const cards = [...document.querySelectorAll(".work-card")];
-const btn = document.getElementById("btnVerMais");
-
-let visible = 0;
-
-
-/* ===== Quantos cards mostrar ===== */
-
-function cardsPerClick(){
-
-    if(window.innerWidth >= 992){
-
-        return 5;
-
-    }
-
-    if(window.innerWidth >= 768){
-
-        return 8;
-
-    }
-
-    return 6;
-
-}
-
-
-/* ===== Esconde todos os cards ===== */
-
-function hideAllCards(){
-
-    cards.forEach(card=>{
-
-        card.classList.add("hidden");
-        card.classList.remove("pre-show","show");
-
-    });
-
-}
-
-
-/* ===== Revela um card ===== */
-
-function revealCard(card){
-
-    card.classList.remove("hidden");
-    card.classList.add("pre-show");
-
-    requestAnimationFrame(()=>{
-
-        requestAnimationFrame(()=>{
-
-            card.classList.remove("pre-show");
-            card.classList.add("show");
-
-        });
-
-    });
-
-}
-
-
-/* ===== Revela uma lista de cards (efeito cascata) ===== */
-
-function revealCards(list){
-
-    list.forEach((card,index)=>{
-
-        setTimeout(()=>{
-
-            revealCard(card);
-
-        },index * 90);
-
-    });
-
-}
-
-
-/* ===== Carregamento inicial ===== */
-
-function initialLoad(){
-
-    visible = cardsPerClick();
-
-    hideAllCards();
-
-    revealCards(cards.slice(0,visible));
-
-    btn.style.display =
-        visible >= cards.length
-            ? "none"
-            : "inline-flex";
-
-}
-
-
-/* ===== Clique em Ver Mais ===== */
-
-function showMore(){
-
-    const amount = cardsPerClick();
-
-    const next = cards.slice(visible,visible + amount);
-
-    revealCards(next);
-
-    visible += amount;
-
-    if(visible >= cards.length){
-
-        btn.style.display = "none";
-
-    }
-
-}
-
-
-/* ===== Resize ===== */
-
-window.addEventListener("resize",()=>{
-
-    const oldVisible = visible;
-
-    visible = Math.max(oldVisible,cardsPerClick());
-
-    hideAllCards();
-
-    revealCards(cards.slice(0,visible));
-
-    btn.style.display =
-        visible >= cards.length
-            ? "none"
-            : "inline-flex";
-
-});
-
-
-/* ===== Eventos ===== */
-
-btn.addEventListener("click",showMore);
-
-initialLoad();
-
-
 
 
 
