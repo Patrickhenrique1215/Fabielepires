@@ -896,3 +896,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
+/* ==========================================================
+  CLIQUE EM TEXTO
+========================================================== */
+document.querySelectorAll('.work-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const category = card.dataset.category;
+    
+    if (category === 'texto') {
+      const url = card.dataset.url;
+      if (url) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
+      return;
+    }
+  });
+});
